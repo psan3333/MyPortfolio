@@ -2,7 +2,8 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import { Button } from "./ui/button";
+import { Link } from "react-router";
+import Text from "./ui/Text";
 
 export function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -65,42 +66,30 @@ export function Hero() {
 
                 <h1
                     ref={titleRef}
-                    className="text-5xl md:text-7xl font-bold text-gray-900 mb-6"
+                    className="text-5xl md:text-7xl font-bold text-secondary-foreground mb-6"
                 >
                     Full Stack
-                    <span className="text-yandex-red"> Developer</span>
+                    <span className="text-surface-4"> Developer</span>
                 </h1>
 
-                <p
+                <Text
                     ref={subtitleRef}
-                    className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed"
+                    className="text-secondary-foreground/50"
                 >
                     Building scalable web applications with modern technologies.
                     Passionate about creating exceptional user experiences.
-                </p>
+                </Text>
 
                 <div
                     ref={buttonsRef}
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+                    className="flex flex-row gap-4 justify-center items-center mb-12"
                 >
-                    <a href="#projects">
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="px-8 py-6 border-2 border-chart-2 font-bold rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-foreground hover:text-background"
-                        >
-                            View My Work
-                        </Button>
-                    </a>
-                    <a href="#contact">
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="px-8 py-6 border-2 border-chart-2 font-bold rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-foreground hover:text-background"
-                        >
-                            Get In Touch
-                        </Button>
-                    </a>
+                    <Link to="#projects" className="btn-default">
+                        View My Work
+                    </Link>
+                    <Link to="#contact" className="btn-outline">
+                        Get in Touch
+                    </Link>
                 </div>
 
                 <div ref={socialsRef} className="flex justify-center gap-6">
@@ -108,7 +97,7 @@ export function Hero() {
                         href="https://github.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 rounded-full bg-gray-100 hover:bg-gray-900 hover:text-white transition-all duration-300 group"
+                        className="icon-contrast group"
                     >
                         <Github
                             size={22}
@@ -119,16 +108,16 @@ export function Hero() {
                         href="https://linkedin.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 rounded-full bg-gray-100 hover:bg-yandex-blue hover:text-white transition-all duration-300 group"
+                        className="icon-contrast group"
                     >
                         <Linkedin
                             size={22}
-                            className="group-hover:scale-110 transition-transform"
+                            className="group-hover:scale-110 transition-transform text-surface-4"
                         />
                     </a>
                     <a
                         href="mailto:hello@example.com"
-                        className="p-3 rounded-full bg-gray-100 hover:bg-yandex-green hover:text-white transition-all duration-300 group"
+                        className="icon-contrast group"
                     >
                         <Mail
                             size={22}

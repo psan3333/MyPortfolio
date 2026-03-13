@@ -31,20 +31,12 @@
     --border: oklch(0.923 0.003 48.717);
     --input: oklch(0.923 0.003 48.717);
     --ring: oklch(0.709 0.01 56.259);
-    --chart-1: oklch(0.897 0.196 126.665);
-    --chart-2: oklch(0.768 0.233 130.85);
-    --chart-3: oklch(0.648 0.2 131.684);
-    --chart-4: oklch(0.532 0.157 131.589);
-    --chart-5: oklch(0.453 0.124 130.933);
+    --surface-1: oklch(0.897 0.196 126.665);
+    --surface-2: oklch(0.768 0.233 130.85);
+    --surface-3: oklch(0.648 0.2 131.684);
+    --surface-4: oklch(0.532 0.157 131.589);
+    --surface-5: oklch(0.453 0.124 130.933);
     --radius: 0.625rem;
-    --sidebar: oklch(0.985 0.001 106.423);
-    --sidebar-foreground: oklch(0.147 0.004 49.25);
-    --sidebar-primary: oklch(0.216 0.006 56.043);
-    --sidebar-primary-foreground: oklch(0.985 0.001 106.423);
-    --sidebar-accent: oklch(0.97 0.001 106.424);
-    --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
-    --sidebar-border: oklch(0.923 0.003 48.717);
-    --sidebar-ring: oklch(0.709 0.01 56.259);
 }
 
 .dark {
@@ -66,36 +58,20 @@
     --border: oklch(1 0 0 / 10%);
     --input: oklch(1 0 0 / 15%);
     --ring: oklch(0.553 0.013 58.071);
-    --chart-1: oklch(0.897 0.196 126.665);
-    --chart-2: oklch(0.768 0.233 130.85);
-    --chart-3: oklch(0.648 0.2 131.684);
-    --chart-4: oklch(0.532 0.157 131.589);
-    --chart-5: oklch(0.453 0.124 130.933);
-    --sidebar: oklch(0.216 0.006 56.043);
-    --sidebar-foreground: oklch(0.985 0.001 106.423);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0.001 106.423);
-    --sidebar-accent: oklch(0.268 0.007 34.298);
-    --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.553 0.013 58.071);
+    --surface-1: oklch(0.897 0.196 126.665);
+    --surface-2: oklch(0.768 0.233 130.85);
+    --surface-3: oklch(0.648 0.2 131.684);
+    --surface-4: oklch(0.532 0.157 131.589);
+    --surface-5: oklch(0.453 0.124 130.933);
 }
 
 @theme inline {
     --font-sans: "Nunito Sans Variable", sans-serif;
-    --color-sidebar-ring: var(--sidebar-ring);
-    --color-sidebar-border: var(--sidebar-border);
-    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-    --color-sidebar-accent: var(--sidebar-accent);
-    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-    --color-sidebar-primary: var(--sidebar-primary);
-    --color-sidebar-foreground: var(--sidebar-foreground);
-    --color-sidebar: var(--sidebar);
-    --color-chart-5: var(--chart-5);
-    --color-chart-4: var(--chart-4);
-    --color-chart-3: var(--chart-3);
-    --color-chart-2: var(--chart-2);
-    --color-chart-1: var(--chart-1);
+    --color-surface-5: var(--surface-5);
+    --color-surface-4: var(--surface-4);
+    --color-surface-3: var(--surface-3);
+    --color-surface-2: var(--surface-2);
+    --color-surface-1: var(--surface-1);
     --color-ring: var(--ring);
     --color-input: var(--input);
     --color-border: var(--border);
@@ -142,4 +118,22 @@
 ::-webkit-scrollbar-thumb {
     background: var(--chart-4);
     border-radius: 4px;
+}
+
+/* custom utilities */
+
+@utility card-shadow {
+    @apply shadow-lg shadow-foreground/10;
+}
+
+@utility btn-default {
+    @apply px-6 py-4 border-2 border-surface-2 font-bold rounded-lg card-shadow transition-all duration-300 hover:scale-105 hover:shadow-xl bg-surface-2 text-background;
+}
+
+@utility btn-outline {
+    @apply px-6 py-4 border-2 border-surface-2 font-bold rounded-lg card-shadow transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-foreground hover:text-background;
+}
+
+@utility icon-contrast {
+    @apply p-3 rounded-full shadow-sm shadow-foreground bg-transparent hover:bg-foreground hover:text-background transition-all duration-300;
 }

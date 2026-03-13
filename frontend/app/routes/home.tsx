@@ -10,8 +10,12 @@ import { Footer } from "~/components/Footer";
 
 export function meta({}: Route.MetaArgs) {
     return [
-        { title: "New React Router App" },
-        { name: "description", content: "Welcome to React Router!" },
+        { title: "Alexey Tsarev" },
+        {
+            name: "page description",
+            content:
+                "On this page you can find information about Alexey Tsarev - Fullstack Developer from Russia, Barnaul. Right now I'm in search for a new job in development.",
+        },
     ];
 }
 

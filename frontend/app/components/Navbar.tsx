@@ -45,7 +45,7 @@ export function Navbar() {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                 isScrolled
-                    ? "bg-white/95 backdrop-blur-md shadow-md py-3"
+                    ? "bg-secondary/35 backdrop-blur-md shadow-md py-3"
                     : "bg-transparent py-5",
             )}
         >
@@ -53,7 +53,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between">
                     <Link
                         to="/"
-                        className="text-2xl font-bold text-[#FC3215] tracking-tight"
+                        className="text-2xl font-bold text-surface-4 tracking-tight"
                     >
                         Portfolio
                     </Link>
@@ -63,11 +63,12 @@ export function Navbar() {
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="text-sm font-medium text-gray-700 hover:text-[#FC3215] transition-colors duration-200"
+                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
                             >
                                 {item.name}
                             </a>
                         ))}
+                        <button className="icon-contrast">Theme</button>
                     </div>
 
                     <button
