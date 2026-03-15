@@ -1,9 +1,10 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
+import { FiLinkedin } from "react-icons/fi";
+import { RiGithubLine } from "react-icons/ri";
 import { Link } from "react-router";
-import Text from "./ui/Text";
 
 export function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -57,11 +58,14 @@ export function Hero() {
         <section
             id="home"
             ref={containerRef}
-            className="min-h-screen flex items-center justify-center relative overflow-hidden"
+            className="min-h-screen flex items-center justify-center"
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
                 <p className="text-sm font-medium text-yandex-red mb-4 tracking-widest uppercase">
-                    Hello, I'm
+                    Hello, I'm{" "}
+                    <span className="text-surface-4 dark:text-surface-3 font-extrabold">
+                        Tsarev Alexey
+                    </span>
                 </p>
 
                 <h1
@@ -69,16 +73,16 @@ export function Hero() {
                     className="text-5xl md:text-7xl font-bold text-secondary-foreground mb-6"
                 >
                     Full Stack
-                    <span className="text-surface-4"> Developer</span>
+                    <span className="text-surface-4 dark:text-surface-3">
+                        {" "}
+                        Developer
+                    </span>
                 </h1>
 
-                <Text
-                    ref={subtitleRef}
-                    className="text-secondary-foreground/50"
-                >
+                <p ref={subtitleRef} className="text-secondary-foreground/50">
                     Building scalable web applications with modern technologies.
                     Passionate about creating exceptional user experiences.
-                </Text>
+                </p>
 
                 <div
                     ref={buttonsRef}
@@ -99,9 +103,9 @@ export function Hero() {
                         rel="noopener noreferrer"
                         className="icon-contrast group"
                     >
-                        <Github
+                        <RiGithubLine
                             size={22}
-                            className="group-hover:scale-110 transition-transform"
+                            className="scale-110 group-hover:scale-120"
                         />
                     </a>
                     <a
@@ -110,9 +114,9 @@ export function Hero() {
                         rel="noopener noreferrer"
                         className="icon-contrast group"
                     >
-                        <Linkedin
+                        <FiLinkedin
                             size={22}
-                            className="group-hover:scale-110 transition-transform text-surface-4"
+                            className="group-hover:scale-110 group-hover:text-surface-4"
                         />
                     </a>
                     <a
@@ -121,7 +125,7 @@ export function Hero() {
                     >
                         <Mail
                             size={22}
-                            className="group-hover:scale-110 transition-transform"
+                            className="group-hover:scale-110 group-hover:text-blue-400"
                         />
                     </a>
                 </div>

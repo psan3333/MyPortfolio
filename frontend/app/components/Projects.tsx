@@ -35,7 +35,6 @@ const projects = [
 ];
 
 export function Projects() {
-    const containerRef = useRef<HTMLDivElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
     const cardsRef = useRef<HTMLDivElement>(null);
 
@@ -46,8 +45,9 @@ export function Projects() {
 
             gsap.from(cards, {
                 scrollTrigger: {
-                    trigger: containerRef.current,
+                    trigger: cardsRef.current,
                     start: "top 70%",
+                    markers: true,
                 },
                 y: 50,
                 opacity: 0,
@@ -56,21 +56,20 @@ export function Projects() {
                 ease: "power3.out",
             });
         },
-        { scope: containerRef },
+        { scope: cardsRef },
     );
 
     return (
-        <section id="projects" ref={containerRef} className="py-24 bg-gray-50">
+        <section id="projects" className="py-24 bg-secondary">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2
                         ref={titleRef}
-                        className="text-3xl md:text-4xl font-bold text-gray-900"
+                        className="text-3xl md:text-4xl font-bold"
                     >
-                        Featured{" "}
-                        <span className="text-yandex-red">Projects</span>
+                        Featured <span>Projects</span>
                     </h2>
-                    <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    <p className="mt-4 max-w-2xl mx-auto">
                         Here are some of the projects I've worked on
                     </p>
                 </div>

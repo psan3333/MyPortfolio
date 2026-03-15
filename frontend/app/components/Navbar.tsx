@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { useTheme } from "~/hooks/useTheme";
@@ -19,6 +19,7 @@ export function Navbar() {
 
     const theme = useTheme((state) => state.theme);
     const setTheme = useTheme((state) => state.setTheme);
+    const toggleTheme = useTheme((state) => state.toggleTheme);
 
     useEffect(() => {
         const prefersDark = window.matchMedia(
@@ -34,10 +35,8 @@ export function Navbar() {
     }, []);
 
     useEffect(() => {
-        // setup Tailwind CSS dark theme
-        console.log("toggle!", theme, theme === "dark");
+        // setup Tailwind CSS theming
         document.documentElement.classList.toggle("dark", theme === "dark");
-        console.log(document.documentElement.classList.contains("dark"));
     }, [theme]);
 
     return (
@@ -60,15 +59,23 @@ export function Navbar() {
 
                     <div className="hidden md:flex items-center space-x-8">
                         {navItems.map((item) => (
-                            <a
+                            <NavLink
                                 key={item.name}
-                                href={item.href}
+                                to={item.href}
                                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
                             >
                                 {item.name}
-                            </a>
+                            </NavLink>
                         ))}
-                        <button className="icon-contrast">Theme</button>
+                        <button
+                            className="icon-contrast"
+                            onClick={() => toggleTheme()}
+                        >
+                            Theme
+                        </button>
+                        <button className="icon-contrast" onClick={() => {}}>
+                            Language
+                        </button>
                     </div>
 
                     <button
@@ -91,7 +98,7 @@ export function Navbar() {
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="block text-base font-medium text-gray-700 hover:text-[#FC3215] transition-colors"
+                                className="block text-base font-medium text-muted-foreground transition-colors"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 {item.name}

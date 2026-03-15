@@ -127,7 +127,7 @@
 }
 
 @utility btn-default {
-    @apply px-6 py-4 border-2 border-surface-2 font-bold rounded-lg card-shadow transition-all duration-300 hover:scale-105 hover:shadow-xl bg-surface-2 text-background;
+    @apply px-6 py-4 border-2 border-surface-2 font-bold rounded-lg card-shadow transition-all duration-300 hover:scale-105 hover:shadow-xl bg-surface-3 dark:bg-surface-2 text-background;
 }
 
 @utility btn-outline {
@@ -136,4 +136,32 @@
 
 @utility icon-contrast {
     @apply p-3 rounded-full shadow-sm shadow-foreground bg-transparent hover:bg-foreground hover:text-background transition-all duration-300;
+}
+
+h1 {
+    @apply text-6xl lg:text-8xl font-bold text-secondary-foreground mb-6;
+}
+
+h2 {
+    @apply text-5xl lg:text-7xl font-bold text-secondary-foreground mb-6;
+}
+
+h3 {
+    @apply text-4xl lg:text-6xl font-bold text-secondary-foreground mb-6;
+}
+
+h4 {
+    @apply text-3xl lg:text-5xl font-bold text-secondary-foreground mb-6;
+}
+
+h5 {
+    @apply text-2xl lg:text-4xl font-bold text-secondary-foreground mb-6;
+}
+
+h6 {
+    @apply text-xl lg:text-3xl font-bold text-secondary-foreground mb-6;
+}
+
+p {
+    @apply text-xl md:text-2xl text-foreground mb-10 max-w-2xl mx-auto leading-relaxed;
 }
