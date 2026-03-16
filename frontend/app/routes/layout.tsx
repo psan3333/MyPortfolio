@@ -1,5 +1,3 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import React from "react";
 import { Outlet } from "react-router";
 import { Footer } from "~/components/Footer";

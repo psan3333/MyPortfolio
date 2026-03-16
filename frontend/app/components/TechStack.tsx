@@ -87,7 +87,7 @@ export function TechStack() {
                         const { Icon, tech, className } = item;
                         return (
                             <div
-                                key={tech}
+                                key={`${tech}-${index}`}
                                 className="inline-flex items-center gap-3 px-6 py-3 backdrop-blur-sm rounded-full"
                             >
                                 <Icon size={64} className={className} />

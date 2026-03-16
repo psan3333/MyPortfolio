@@ -1,11 +1,10 @@
-import { zustandIcon } from "public/images";
 import type { IconType } from "react-icons/lib";
 
 const ZustandIcon: IconType = ({ size, className }) => {
     return (
         <img
             className={className}
-            src={zustandIcon}
+            src="/Zustand.svg"
             width={size}
             height={size}
         />

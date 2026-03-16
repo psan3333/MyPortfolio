@@ -3,14 +3,16 @@ import { Link, NavLink } from "react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { useTheme } from "~/hooks/useTheme";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Tech Stack", href: "#tech" },
-    { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
+    { name: "home", href: "#home" },
+    { name: "about", href: "#about" },
+    { name: "techStack", href: "#tech" },
+    { name: "projects", href: "#projects" },
+    { name: "experience", href: "#experience" },
+    { name: "contact", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -20,6 +22,7 @@ export function Navbar() {
     const theme = useTheme((state) => state.theme);
     const setTheme = useTheme((state) => state.setTheme);
     const toggleTheme = useTheme((state) => state.toggleTheme);
+    const { t } = useTranslation();
 
     useEffect(() => {
         const prefersDark = window.matchMedia(
@@ -54,7 +57,7 @@ export function Navbar() {
                         to="/"
                         className="text-2xl font-bold text-surface-4 tracking-tight"
                     >
-                        Portfolio
+                        {t("nav.portfolio")}
                     </Link>
 
                     <div className="hidden md:flex items-center space-x-8">
@@ -64,7 +67,7 @@ export function Navbar() {
                                 to={item.href}
                                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
                             >
-                                {item.name}
+                                {t(`nav.${item.name}`)}
                             </NavLink>
                         ))}
                         <button
@@ -73,9 +76,7 @@ export function Navbar() {
                         >
                             Theme
                         </button>
-                        <button className="icon-contrast" onClick={() => {}}>
-                            Language
-                        </button>
+                        <LanguageSwitcher />
                     </div>
 
                     <button
@@ -101,7 +102,7 @@ export function Navbar() {
                                 className="block text-base font-medium text-muted-foreground transition-colors"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
-                                {item.name}
+                                {t(`nav.${item.name}`)}
                             </a>
                         ))}
                     </div>

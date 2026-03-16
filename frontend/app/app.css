@@ -163,5 +163,5 @@ h6 {
 }
 
 p {
-    @apply text-xl md:text-2xl text-foreground mb-10 max-w-2xl mx-auto leading-relaxed;
+    @apply text-foreground max-w-2xl leading-relaxed;
 }

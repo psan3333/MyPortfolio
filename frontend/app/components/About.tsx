@@ -2,36 +2,13 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { User, Code, Lightbulb, Rocket } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const aboutItems = [
-    {
-        icon: User,
-        title: "About Me",
-        description:
-            "I am a passionate full-stack developer with expertise in building modern web and mobile applications. I love turning complex problems into simple, beautiful solutions.",
-    },
-    {
-        icon: Code,
-        title: "Development",
-        description:
-            "Specialized in React, Next.js, and TypeScript. I write clean, maintainable code and follow best practices for scalability and performance.",
-    },
-    {
-        icon: Lightbulb,
-        title: "Problem Solving",
-        description:
-            "I approach challenges with analytical thinking and creative solutions. Always eager to learn new technologies and improve existing skills.",
-    },
-    {
-        icon: Rocket,
-        title: "Innovation",
-        description:
-            "Constantly exploring new frontiers in web development. I stay updated with the latest trends and bring modern solutions to every project.",
-    },
-];
+const aboutIcons = [User, Code, Lightbulb, Rocket];
 
 export function About() {
     const cardsRef = useRef<HTMLDivElement>(null);
+    const { t } = useTranslation();
 
     const { contextSafe } = useGSAP(
         (context, contextSafe) => {
@@ -83,9 +60,9 @@ export function About() {
 
                 <div
                     ref={cardsRef}
-                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-12"
+                    className="grid md:grid-cols-2 2xl:grid-cols-4 gap-12"
                 >
-                    {aboutItems.map((item, index) => (
+                    {aboutIcons.map((Icon, index) => (
                         <div
                             key={index}
                             onMouseEnter={(e) => onMouseEnter(e.currentTarget)}
@@ -93,16 +70,16 @@ export function About() {
                             className="p-6 rounded-2xl bg-accent hover:bg-background hover:shadow-xl transition-colors duration-300 border border-accent-foreground/10 group"
                         >
                             <div className="w-14 h-14 rounded-xl bg-surface-4/10 flex items-center justify-center mb-4 group-hover:bg-surface-3/10 transition-colors duration-300">
-                                <item.icon
+                                <Icon
                                     size={28}
                                     className="text-surface-4 dark:text-surface-1 group-hover:text-foreground transition-colors duration-300"
                                 />
                             </div>
                             <h4 className="text-accent-foreground mb-3">
-                                {item.title}
+                                {t(`aboutMe.${index}.title`)}
                             </h4>
-                            <p className="text-accent-foreground/70 leading-relaxed">
-                                {item.description}
+                            <p className="text-[18px] lg:text-[22px] text-accent-foreground/70 leading-relaxed">
+                                {t(`aboutMe.${index}.text`)}
                             </p>
                         </div>
                     ))}

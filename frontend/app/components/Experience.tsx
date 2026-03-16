@@ -2,17 +2,9 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Calendar, MapPin } from "lucide-react";
+import { cn } from "~/lib/utils";
 
 const experiences = [
-    {
-        company: "Tech Company Inc.",
-        role: "Senior Full Stack Developer",
-        period: "2023 - Present",
-        location: "San Francisco, CA",
-        description:
-            "Leading development of enterprise-level web applications. Managing a team of 5 developers and implementing best practices for code quality and performance.",
-        technologies: ["React", "Next.js", "TypeScript", "PostgreSQL"],
-    },
     {
         company: "StartupXYZ",
         role: "Full Stack Developer",
@@ -58,47 +50,74 @@ export function Experience() {
     );
 
     return (
-        <section id="experience" ref={containerRef} className="py-24 bg-white">
+        <section
+            id="experience"
+            ref={containerRef}
+            className="py-24 bg-background"
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                        Work <span className="text-yandex-red">Experience</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                        Work <span className="text-surface-2">Experience</span>
                     </h2>
-                    <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    <p className="text-foreground-muted mt-4 max-w-2xl mx-auto">
                         My professional journey in tech
                     </p>
                 </div>
 
                 <div className="relative">
-                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 md:-translate-x-px" />
+                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-secondary md:-translate-x-px" />
 
                     <div ref={itemsRef} className="space-y-12">
                         {experiences.map((exp, index) => (
                             <div
                                 key={index}
-                                className={`relative flex flex-col md:flex-row gap-8 ${
-                                    index % 2 === 0 ? "md:flex-row-reverse" : ""
-                                }`}
+                                className={cn(
+                                    "relative flex flex-col md:flex-row gap-8",
+                                    index % 2 === 0
+                                        ? "md:flex-row-reverse"
+                                        : "",
+                                )}
                             >
-                                <div className="flex-1 md:text-right">
-                                    <div className="bg-gray-50 p-6 rounded-2xl hover:shadow-lg transition-shadow duration-300">
-                                        <h3 className="text-xl font-semibold text-gray-900">
+                                <div
+                                    className={cn(
+                                        "flex-1",
+                                        index % 2 === 1
+                                            ? "md:text-right"
+                                            : "md:text-left",
+                                    )}
+                                >
+                                    <div
+                                        className={cn(
+                                            "flex flex-col bg-secondary p-6 rounded-2xl hover:shadow-lg transition-shadow duration-300",
+                                            index % 2 === 1
+                                                ? "items-end"
+                                                : "items-start",
+                                        )}
+                                    >
+                                        <h3 className="text-xl font-semibold text-foreground">
                                             {exp.role}
                                         </h3>
-                                        <p className="text-yandex-red font-medium mt-1">
+                                        <p className="text-surface-4 dark:text-surface-2 font-medium mt-1">
                                             {exp.company}
                                         </p>
-                                        <div className="flex flex-wrap gap-4 mt-3 text-sm text-gray-500 justify-end">
+                                        <div className="flex flex-wrap gap-4 mt-3 text-sm text-accent-foreground">
                                             <span className="flex items-center gap-1">
-                                                <Calendar size={14} />
+                                                <Calendar
+                                                    size={14}
+                                                    className="text-surface-4 dark:text-surface-2"
+                                                />
                                                 {exp.period}
                                             </span>
                                             <span className="flex items-center gap-1">
-                                                <MapPin size={14} />
+                                                <MapPin
+                                                    size={14}
+                                                    className="text-surface-4 dark:text-surface-2"
+                                                />
                                                 {exp.location}
                                             </span>
                                         </div>
-                                        <p className="text-gray-600 mt-4 leading-relaxed">
+                                        <p className="text-muted-foreground mt-4 leading-relaxed">
                                             {exp.description}
                                         </p>
                                         <div className="flex flex-wrap gap-2 mt-4 justify-end">
@@ -106,7 +125,7 @@ export function Experience() {
                                                 (tech, techIndex) => (
                                                     <span
                                                         key={techIndex}
-                                                        className="px-2 py-1 text-xs font-medium bg-white border border-gray-200 text-gray-600 rounded"
+                                                        className="px-2 py-1 text-xs font-medium bg-background border border-muted text-foreground rounded hover:text-background hover:bg-foreground transition-colors duration-200"
                                                     >
                                                         {tech}
                                                     </span>
@@ -116,7 +135,7 @@ export function Experience() {
                                     </div>
                                 </div>
 
-                                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-yandex-red rounded-full border-4 border-white shadow-lg z-10" />
+                                <div className="absolute left-2 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-surface-2 rounded-full border-4 border-surface-4 dark:border-surface-2 shadow-lg z-10" />
 
                                 <div className="flex-1" />
                             </div>

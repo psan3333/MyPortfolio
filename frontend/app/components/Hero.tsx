@@ -5,6 +5,7 @@ import { ArrowDown, Mail } from "lucide-react";
 import { FiLinkedin } from "react-icons/fi";
 import { RiGithubLine } from "react-icons/ri";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 export function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -12,6 +13,8 @@ export function Hero() {
     const subtitleRef = useRef<HTMLParagraphElement>(null);
     const buttonsRef = useRef<HTMLDivElement>(null);
     const socialsRef = useRef<HTMLDivElement>(null);
+
+    const { t } = useTranslation();
 
     useGSAP(
         () => {
@@ -61,10 +64,10 @@ export function Hero() {
             className="min-h-screen flex items-center justify-center"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-                <p className="text-sm font-medium text-yandex-red mb-4 tracking-widest uppercase">
-                    Hello, I'm{" "}
+                <p className="mb-10 mx-auto text-sm font-medium text-yandex-red tracking-widest uppercase">
+                    {t("hero.hello")}{" "}
                     <span className="text-surface-4 dark:text-surface-3 font-extrabold">
-                        Tsarev Alexey
+                        {t("hero.me")}
                     </span>
                 </p>
 
@@ -72,16 +75,18 @@ export function Hero() {
                     ref={titleRef}
                     className="text-5xl md:text-7xl font-bold text-secondary-foreground mb-6"
                 >
-                    Full Stack
+                    {t("hero.fullstack")}
                     <span className="text-surface-4 dark:text-surface-3">
                         {" "}
-                        Developer
+                        {t("hero.dev")}
                     </span>
                 </h1>
 
-                <p ref={subtitleRef} className="text-secondary-foreground/50">
-                    Building scalable web applications with modern technologies.
-                    Passionate about creating exceptional user experiences.
+                <p
+                    ref={subtitleRef}
+                    className="text-xl md:text-2xl mx-auto mb-10 text-secondary-foreground/50"
+                >
+                    {t("hero.desc")}
                 </p>
 
                 <div
@@ -89,10 +94,10 @@ export function Hero() {
                     className="flex flex-row gap-4 justify-center items-center mb-12"
                 >
                     <Link to="#projects" className="btn-default">
-                        View My Work
+                        {t("hero.viewWork")}
                     </Link>
                     <Link to="#contact" className="btn-outline">
-                        Get in Touch
+                        {t("hero.getInTouch")}
                     </Link>
                 </div>
 

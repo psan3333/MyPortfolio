@@ -1,36 +1,30 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { RiGithubLine } from "react-icons/ri";
 
 const projects = [
     {
-        title: "E-Commerce Platform",
+        title: "FLAT",
         description:
-            "A full-featured online store built with Next.js, featuring cart management, user authentication, and payment integration.",
-        tags: ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
-        image: "bg-gradient-to-br from-[#FC3215] to-[#FF6B35]",
+            "Automated platform for real estate renting with remote interactions and payment + document creation and signing.",
+        tags: ["Next.js", "TypeScript", "MongoDB", "Prisma ORM", "Yandex Maps"],
+        image: "bg-gradient-to-br from-[#e9ac3b] to-[#e0cb0e]",
     },
     {
-        title: "Task Management App",
+        title: "Schedule",
         description:
-            "A collaborative task management application with real-time updates, team workspaces, and drag-and-drop interface.",
-        tags: ["React", "Firebase", "GSAP", "TailwindCSS"],
-        image: "bg-gradient-to-br from-[#0077FF] to-[#00D4FF]",
+            "A mobile app which has analytics board with tasks management, charts and tools to work with AI - user can use AI API to analyze his behavioural data.",
+        tags: ["Expo", "Drizzle ORM", "Expo-SQLite", "Zustand"],
+        image: "bg-gradient-to-br from-[#0aad46] to-[#93e76f]",
     },
     {
-        title: "Social Media Dashboard",
+        title: "Collab Bot",
         description:
-            "Analytics dashboard for social media management with charts, scheduling, and engagement tracking features.",
-        tags: ["React Native", "Expo", "MongoDB", "Node.js"],
-        image: "bg-gradient-to-br from-[#00B341] to-[#7ED957]",
-    },
-    {
-        title: "Portfolio Generator",
-        description:
-            "A tool that helps developers create beautiful portfolio websites with customizable themes and templates.",
-        tags: ["TypeScript", "Go", "Drizzle", "SQLite"],
-        image: "bg-gradient-to-br from-[#9B59B6] to-[#E74C3C]",
+            "A Telegram bot which is designed to create space for people to exchange ideas and advertize personal services.",
+        tags: ["Python", "Telegram API", "Mongo DB", "Docker"],
+        image: "bg-gradient-to-br from-[#0077FF] to-[#45d5f1]",
     },
 ];
 
@@ -60,7 +54,7 @@ export function Projects() {
     );
 
     return (
-        <section id="projects" className="py-24 bg-secondary">
+        <section id="projects" className="py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2
@@ -78,7 +72,7 @@ export function Projects() {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-500 group"
+                            className="flex flex-col bg-secondary rounded-2xl overflow-hidden shadow-muted-foreground shadow-md hover:shadow-lg transition-shadow duration-500 group"
                         >
                             <div
                                 className={`h-56 ${project.image} relative overflow-hidden`}
@@ -87,20 +81,20 @@ export function Projects() {
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-4">
                                     <a
                                         href="#"
-                                        className="p-3 bg-white rounded-full hover:bg-yandex-red hover:text-white transition-colors duration-300"
+                                        className="icon-contrast bg-foreground/5 backdrop-blur-md"
                                     >
-                                        <Github size={20} />
+                                        <RiGithubLine size={20} />
                                     </a>
                                     <a
                                         href="#"
-                                        className="p-3 bg-white rounded-full hover:bg-yandex-red hover:text-white transition-colors duration-300"
+                                        className="icon-contrast bg-foreground/5 backdrop-blur-md"
                                     >
                                         <ExternalLink size={20} />
                                     </a>
                                 </div>
                             </div>
 
-                            <div className="p-6">
+                            <div className="p-6 flex-1 flex flex-col justify-between items-start">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-yandex-red transition-colors duration-300">
                                     {project.title}
                                 </h3>
@@ -129,7 +123,7 @@ export function Projects() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-900 text-gray-900 font-medium rounded-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
                     >
-                        <Github size={20} />
+                        <RiGithubLine size={20} />
                         View More on GitHub
                     </a>
                 </div>
