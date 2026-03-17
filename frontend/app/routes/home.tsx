@@ -7,9 +7,9 @@ import { Experience } from "~/components/Experience";
 import { Contact } from "~/components/Contact";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger, SplitText } from "gsap/all";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 export function meta({}: Route.MetaArgs) {
     return [

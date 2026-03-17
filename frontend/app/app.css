@@ -138,6 +138,10 @@
     @apply p-3 rounded-full shadow-sm shadow-foreground bg-transparent hover:bg-foreground hover:text-background transition-all duration-300;
 }
 
+@utility themed-text {
+    @apply text-surface-4 dark:text-surface-2;
+}
+
 h1 {
     @apply text-6xl lg:text-8xl font-bold text-secondary-foreground mb-6;
 }

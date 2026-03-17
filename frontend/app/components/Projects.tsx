@@ -3,34 +3,35 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ExternalLink } from "lucide-react";
 import { RiGithubLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 const projects = [
     {
         title: "FLAT",
-        description:
-            "Automated platform for real estate renting with remote interactions and payment + document creation and signing.",
         tags: ["Next.js", "TypeScript", "MongoDB", "Prisma ORM", "Yandex Maps"],
         image: "bg-gradient-to-br from-[#e9ac3b] to-[#e0cb0e]",
     },
     {
         title: "Schedule",
-        description:
-            "A mobile app which has analytics board with tasks management, charts and tools to work with AI - user can use AI API to analyze his behavioural data.",
         tags: ["Expo", "Drizzle ORM", "Expo-SQLite", "Zustand"],
         image: "bg-gradient-to-br from-[#0aad46] to-[#93e76f]",
     },
     {
         title: "Collab Bot",
-        description:
-            "A Telegram bot which is designed to create space for people to exchange ideas and advertize personal services.",
         tags: ["Python", "Telegram API", "Mongo DB", "Docker"],
         image: "bg-gradient-to-br from-[#0077FF] to-[#45d5f1]",
+    },
+    {
+        title: "Secret Project",
+        tags: ["Typescript", "Go", "Next.js", "PostgreSQL", "Yandex Maps"],
+        image: "bg-gradient-to-br from-[#fd54a3] to-[#bd0360]",
     },
 ];
 
 export function Projects() {
     const titleRef = useRef<HTMLHeadingElement>(null);
     const cardsRef = useRef<HTMLDivElement>(null);
+    const { t } = useTranslation();
 
     useGSAP(
         () => {
@@ -41,7 +42,7 @@ export function Projects() {
                 scrollTrigger: {
                     trigger: cardsRef.current,
                     start: "top 70%",
-                    markers: true,
+                    // markers: true,
                 },
                 y: 50,
                 opacity: 0,
@@ -61,10 +62,11 @@ export function Projects() {
                         ref={titleRef}
                         className="text-3xl md:text-4xl font-bold"
                     >
-                        Featured <span>Projects</span>
+                        {t("projects.featured")}{" "}
+                        <span>{t("projects.projects")}</span>
                     </h2>
                     <p className="mt-4 max-w-2xl mx-auto">
-                        Here are some of the projects I've worked on
+                        {t("projects.label")}
                     </p>
                 </div>
 
@@ -99,13 +101,13 @@ export function Projects() {
                                     {project.title}
                                 </h3>
                                 <p className="text-gray-600 mb-4 leading-relaxed">
-                                    {project.description}
+                                    {t(`projects.projList.${project.title}`)}
                                 </p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag, tagIndex) => (
                                         <span
                                             key={tagIndex}
-                                            className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full"
+                                            className="px-3 py-1 text-xs font-medium bg-background text-foreground rounded hover:bg-foreground hover:text-background transition-colors duration-300"
                                         >
                                             {tag}
                                         </span>

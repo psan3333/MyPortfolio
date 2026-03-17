@@ -3,65 +3,53 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Calendar, MapPin } from "lucide-react";
 import { cn } from "~/lib/utils";
+import { useTranslation } from "react-i18next";
 
-const experiences = [
+const technologies = [
     {
-        company: "StartupXYZ",
-        role: "Full Stack Developer",
-        period: "2021 - 2023",
-        location: "Remote",
-        description:
-            "Built and maintained multiple client projects from scratch. Implemented real-time features and optimized application performance.",
-        technologies: ["React Native", "Node.js", "MongoDB", "Firebase"],
+        period: "09.2024 - 06.2025",
+        tech: ["PyTorch", "Python", "Genesis", "Deep Learning"],
     },
     {
-        company: "Digital Agency Co.",
-        role: "Frontend Developer",
-        period: "2019 - 2021",
-        location: "New York, NY",
-        description:
-            "Developed responsive websites and web applications for various clients. Collaborated with designers to implement pixel-perfect UIs.",
-        technologies: ["JavaScript", "React", "CSS", "GSAP"],
+        period: "02.2023 - 12.2023",
+        tech: ["Python", "C++", "C#", "OpenCV"],
     },
 ];
 
 export function Experience() {
-    const containerRef = useRef<HTMLDivElement>(null);
     const itemsRef = useRef<HTMLDivElement>(null);
+    const { t } = useTranslation();
 
-    useGSAP(
-        () => {
-            const items = itemsRef.current?.children;
-            if (!items) return;
+    useGSAP(() => {
+        const items = itemsRef.current?.children;
+        if (!items) return;
 
-            gsap.from(items, {
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top 70%",
-                },
-                x: -30,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.2,
-                ease: "power3.out",
-            });
-        },
-        { scope: containerRef },
-    );
+        gsap.from(items, {
+            scrollTrigger: {
+                trigger: itemsRef.current,
+                start: "top 70%",
+                // markers: true,
+            },
+            x: -30,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out",
+        });
+    });
 
     return (
-        <section
-            id="experience"
-            ref={containerRef}
-            className="py-24 bg-background"
-        >
+        <section id="experience" className="py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                        Work <span className="text-surface-2">Experience</span>
+                        {t("experience.work")}{" "}
+                        <span className="text-surface-2">
+                            {t("experience.experience")}
+                        </span>
                     </h2>
                     <p className="text-foreground-muted mt-4 max-w-2xl mx-auto">
-                        My professional journey in tech
+                        {t("experience.label")}
                     </p>
                 </div>
 
@@ -69,7 +57,7 @@ export function Experience() {
                     <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-secondary md:-translate-x-px" />
 
                     <div ref={itemsRef} className="space-y-12">
-                        {experiences.map((exp, index) => (
+                        {technologies.map(({ period, tech }, index) => (
                             <div
                                 key={index}
                                 className={cn(
@@ -96,41 +84,47 @@ export function Experience() {
                                         )}
                                     >
                                         <h3 className="text-xl font-semibold text-foreground">
-                                            {exp.role}
+                                            {t(
+                                                `experience.jobsList.${index}.title`,
+                                            )}
                                         </h3>
-                                        <p className="text-surface-4 dark:text-surface-2 font-medium mt-1">
-                                            {exp.company}
+                                        <p className="themed-text font-medium mt-1">
+                                            {t(
+                                                `experience.jobsList.${index}.company`,
+                                            )}
                                         </p>
                                         <div className="flex flex-wrap gap-4 mt-3 text-sm text-accent-foreground">
                                             <span className="flex items-center gap-1">
                                                 <Calendar
                                                     size={14}
-                                                    className="text-surface-4 dark:text-surface-2"
+                                                    className="themed-text"
                                                 />
-                                                {exp.period}
+                                                {period}
                                             </span>
                                             <span className="flex items-center gap-1">
                                                 <MapPin
                                                     size={14}
-                                                    className="text-surface-4 dark:text-surface-2"
+                                                    className="themed-text"
                                                 />
-                                                {exp.location}
+                                                {t(
+                                                    `experience.jobsList.${index}.location`,
+                                                )}
                                             </span>
                                         </div>
                                         <p className="text-muted-foreground mt-4 leading-relaxed">
-                                            {exp.description}
+                                            {t(
+                                                `experience.jobsList.${index}.desc`,
+                                            )}
                                         </p>
                                         <div className="flex flex-wrap gap-2 mt-4 justify-end">
-                                            {exp.technologies.map(
-                                                (tech, techIndex) => (
-                                                    <span
-                                                        key={techIndex}
-                                                        className="px-2 py-1 text-xs font-medium bg-background border border-muted text-foreground rounded hover:text-background hover:bg-foreground transition-colors duration-200"
-                                                    >
-                                                        {tech}
-                                                    </span>
-                                                ),
-                                            )}
+                                            {tech.map((tech, techIndex) => (
+                                                <span
+                                                    key={techIndex}
+                                                    className="px-2 py-1 text-xs font-medium bg-background border border-muted text-foreground rounded hover:text-background hover:bg-foreground transition-colors duration-200"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>

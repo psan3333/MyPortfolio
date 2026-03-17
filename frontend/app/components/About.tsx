@@ -19,7 +19,7 @@ export function About() {
                 scrollTrigger: {
                     trigger: cardsRef.current,
                     start: "top 70%",
-                    markers: true,
+                    // markers: true,
                 },
                 y: 50,
                 opacity: 0,
@@ -51,10 +51,13 @@ export function About() {
             <div className="mx-auto px-8 sm:px-16 lg:px-24">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                        About <span className="text-surface-3">Me</span>
+                        {t("aboutMe.about")}{" "}
+                        <span className="text-surface-3">
+                            {t("aboutMe.me")}
+                        </span>
                     </h2>
                     <p className="text-secondary-foreground mt-4 max-w-2xl mx-auto">
-                        Get to know more about me and what I do
+                        {t("aboutMe.title")}
                     </p>
                 </div>
 
@@ -72,7 +75,7 @@ export function About() {
                             <div className="w-14 h-14 rounded-xl bg-surface-4/10 flex items-center justify-center mb-4 group-hover:bg-surface-3/10 transition-colors duration-300">
                                 <Icon
                                     size={28}
-                                    className="text-surface-4 dark:text-surface-1 group-hover:text-foreground transition-colors duration-300"
+                                    className="themed-text group-hover:text-foreground transition-colors duration-300"
                                 />
                             </div>
                             <h4 className="text-accent-foreground mb-3">

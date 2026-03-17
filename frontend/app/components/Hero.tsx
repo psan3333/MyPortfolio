@@ -64,9 +64,9 @@ export function Hero() {
             className="min-h-screen flex items-center justify-center"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-                <p className="mb-10 mx-auto text-sm font-medium text-yandex-red tracking-widest uppercase">
+                <p className="mb-10 mx-auto text-lg font-medium text-yandex-red tracking-widest uppercase">
                     {t("hero.hello")}{" "}
-                    <span className="text-surface-4 dark:text-surface-3 font-extrabold">
+                    <span className="themed-text font-extrabold">
                         {t("hero.me")}
                     </span>
                 </p>
@@ -76,10 +76,7 @@ export function Hero() {
                     className="text-5xl md:text-7xl font-bold text-secondary-foreground mb-6"
                 >
                     {t("hero.fullstack")}
-                    <span className="text-surface-4 dark:text-surface-3">
-                        {" "}
-                        {t("hero.dev")}
-                    </span>
+                    <span className="themed-text"> {t("hero.dev")}</span>
                 </h1>
 
                 <p
@@ -103,7 +100,7 @@ export function Hero() {
 
                 <div ref={socialsRef} className="flex justify-center gap-6">
                     <a
-                        href="https://github.com"
+                        href="https://github.com/psan3333"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="icon-contrast group"
@@ -114,7 +111,7 @@ export function Hero() {
                         />
                     </a>
                     <a
-                        href="https://linkedin.com"
+                        href="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D1%86%D0%B0%D1%80%D0%B5%D0%B2-138787390/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="icon-contrast group"
@@ -125,7 +122,7 @@ export function Hero() {
                         />
                     </a>
                     <a
-                        href="mailto:hello@example.com"
+                        href="mailto:tsarev.alexey.work@gmail.com"
                         className="icon-contrast group"
                     >
                         <Mail

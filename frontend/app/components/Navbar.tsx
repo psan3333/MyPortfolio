@@ -57,7 +57,7 @@ export function Navbar() {
                         to="/"
                         className="text-2xl font-bold text-surface-4 tracking-tight"
                     >
-                        {t("nav.portfolio")}
+                        psan3333
                     </Link>
 
                     <div className="hidden md:flex items-center space-x-8">

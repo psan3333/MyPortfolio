@@ -16,6 +16,7 @@ import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
 import { FaGolang } from "react-icons/fa6";
 import type { IconType } from "react-icons/lib";
 import ZustandIcon from "./icons/ZustandIcon";
+import { useTranslation } from "react-i18next";
 
 type StackItem = {
     tech: string;
@@ -49,68 +50,61 @@ const technologies: StackItem[] = [
     { className: "text-[#057AC9]", tech: "SQLite", Icon: SiSqlite },
 ];
 
-export function TechStack() {
-    const containerRef = useRef<HTMLDivElement>(null);
+const RollingList = () => {
     const trackRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(
-        () => {
-            const track = trackRef.current;
-            if (!track) return;
+    useGSAP(() => {
+        const track = trackRef.current;
+        if (!track) return;
 
-            const totalWidth = track.scrollWidth / 2;
+        const totalWidth = track.scrollWidth / 2;
 
-            gsap.to(track, {
-                x: -totalWidth,
-                duration: 20,
-                repeat: -1,
-                ease: "none",
-                modifiers: {
-                    x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
-                },
-            });
-        },
-        { scope: containerRef },
-    );
-
-    const RollingList = () => {
-        return (
-            <div className="relative">
-                <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-secondary to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-secondary to-transparent z-10 pointer-events-none" />
-
-                <div
-                    ref={trackRef}
-                    className="flex gap-8 whitespace-nowrap w-max"
-                >
-                    {[...technologies, ...technologies].map((item, index) => {
-                        const { Icon, tech, className } = item;
-                        return (
-                            <div
-                                key={`${tech}-${index}`}
-                                className="inline-flex items-center gap-3 px-6 py-3 backdrop-blur-sm rounded-full"
-                            >
-                                <Icon size={64} className={className} />
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        );
-    };
+        gsap.to(track, {
+            x: -totalWidth,
+            duration: 20,
+            repeat: -1,
+            ease: "none",
+            modifiers: {
+                x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+            },
+        });
+    });
 
     return (
-        <section
-            id="tech"
-            ref={containerRef}
-            className="py-20 bg-secondary overflow-hidden"
-        >
+        <div className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-secondary to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-secondary to-transparent z-10 pointer-events-none" />
+
+            <div ref={trackRef} className="flex gap-8 whitespace-nowrap w-max">
+                {[...technologies, ...technologies].map((item, index) => {
+                    const { Icon, tech, className } = item;
+                    return (
+                        <div
+                            key={`${tech}-${index}`}
+                            className="inline-flex flex-col items-center gap-3 px-6 py-3 backdrop-blur-sm rounded-full"
+                        >
+                            <Icon size={64} className={className} />
+                            <p>{tech}</p>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
+export function TechStack() {
+    const { t } = useTranslation();
+
+    return (
+        <section id="tech" className="py-20 bg-secondary overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
-                    Tech <span className="text-">Stack</span>
+                    {t("techStack.tech")}{" "}
+                    <span className="themed-text">{t("techStack.stack")}</span>
                 </h2>
                 <p className="text-surface-1 text-center mt-4 max-w-xl mx-auto">
-                    Technologies I work with to build amazing applications
+                    {t("techStack.caption")}
                 </p>
             </div>
 
