@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router";
+import { Link } from "react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { useTheme } from "~/hooks/useTheme";
@@ -48,7 +48,7 @@ export function Navbar() {
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [setTheme]);
 
     useEffect(() => {
         // setup Tailwind CSS theming

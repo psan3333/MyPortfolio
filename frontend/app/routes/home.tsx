@@ -8,6 +8,7 @@ import { ContactMe } from "~/components/ContactMe";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText, ScrollToPlugin } from "gsap/all";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, ScrollToPlugin);
 
@@ -23,6 +24,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+    const { i18n } = useTranslation();
     return (
         <main>
             <Hero />
@@ -30,7 +32,7 @@ export default function Home() {
             <TechStack />
             <Projects />
             <Experience />
-            <ContactMe />
+            <ContactMe lang={i18n.language} />
         </main>
     );
 }
