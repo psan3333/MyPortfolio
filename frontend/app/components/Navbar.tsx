@@ -5,6 +5,8 @@ import { cn } from "~/lib/utils";
 import { useTheme } from "~/hooks/useTheme";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const navItems = [
     { name: "home", href: "#home" },
@@ -23,6 +25,17 @@ export function Navbar() {
     const setTheme = useTheme((state) => state.setTheme);
     const toggleTheme = useTheme((state) => state.toggleTheme);
     const { t } = useTranslation();
+    const { contextSafe } = useGSAP();
+    const scrollToSection = contextSafe((sectionId: string) => {
+        gsap.to(window, {
+            duration: 0.75,
+            scrollTo: {
+                y: sectionId,
+                offsetY: 120,
+            },
+            ease: "power1.inOut",
+        });
+    });
 
     useEffect(() => {
         const prefersDark = window.matchMedia(
@@ -62,13 +75,16 @@ export function Navbar() {
 
                     <div className="hidden md:flex items-center space-x-8">
                         {navItems.map((item) => (
-                            <NavLink
+                            <button
                                 key={item.name}
-                                to={item.href}
                                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    scrollToSection(item.href);
+                                }}
                             >
                                 {t(`nav.${item.name}`)}
-                            </NavLink>
+                            </button>
                         ))}
                         <button
                             className="icon-contrast"

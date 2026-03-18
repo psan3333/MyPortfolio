@@ -61,6 +61,7 @@ i18n
                         featured: "Featured",
                         projects: "Projects",
                         label: "Here are some of the projects I've worked on",
+                        github: "View Projects on GitHub",
                         projList: {
                             FLAT: "Automated platform for real estate renting with remote interactions and payment + document creation and signing.",
                             Schedule: "A mobile app which has analytics board with tasks management, charts and tools to work with AI - user can use AI API to analyze his behavioural data.",
@@ -86,6 +87,16 @@ i18n
                                 location: "Novosibirsk, Russia"
                             },
                         }
+                    },
+                    contactMe: {
+                        getIn: "Get In",
+                        touch: "Touch",
+                        label: "Have a project in mind or want ot collaborate? Feel free to reach out!"
+                    },
+                    footer: {
+                        made: "Made",
+                        with: "with",
+                        and: "and"
                     }
                 }
             },
@@ -131,13 +142,14 @@ i18n
                     },
                     techStack: {
                         tech: "Технологии",
-                        stack: "",
+                        stack: "", // на английском Tech Stack, а на русском можно сократить до одного слова
                         caption: "Технологии, которые я использую для создания разнообразных приложений"
                     },
                     projects: {
                         featured: "Основные",
                         projects: "Проекты",
-                        label: "Примеры проектов, над которыми я работал",
+                        label: "Примеры проектов, над которыми я работаю сейчас",
+                        github: "Проекты на GitHub",
                         projList: {
                             FLAT: "Агрегатор недвижимости для сделок на расстоянии - оплата, заполнение и подписание документов электронно.",
                             Schedule: "Мобильное приложение для анализа выполнения своих задач при помощи графиков и диаграм. Также есть поддержка аналитики от ИИ.",
@@ -163,6 +175,16 @@ i18n
                                 location: "Новосибирск, Россия"
                             }
                         }
+                    },
+                    contactMe: {
+                        getIn: "Связаться со",
+                        touch: "Мной",
+                        label: "Можете без проблем со мной связаться по ссылкам ниже, если хотите предложить совместное сотрудничество!"
+                    },
+                    footer: {
+                        made: "Сделано",
+                        with: "с",
+                        and: "и"
                     }
                 }
             }

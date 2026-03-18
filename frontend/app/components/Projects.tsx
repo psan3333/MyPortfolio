@@ -120,13 +120,13 @@ export function Projects() {
 
                 <div className="text-center mt-12">
                     <a
-                        href="https://github.com"
+                        href="https://github.com/psan3333"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-900 text-gray-900 font-medium rounded-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
+                        className="btn-outline flex flex-row gap-6 w-max mx-auto"
                     >
                         <RiGithubLine size={20} />
-                        View More on GitHub
+                        {t("projects.github")}
                     </a>
                 </div>
             </div>

@@ -44,7 +44,7 @@ export function Experience() {
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                         {t("experience.work")}{" "}
-                        <span className="text-surface-2">
+                        <span className="themed-text">
                             {t("experience.experience")}
                         </span>
                     </h2>
@@ -129,7 +129,7 @@ export function Experience() {
                                     </div>
                                 </div>
 
-                                <div className="absolute left-2 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-surface-2 rounded-full border-4 border-surface-4 dark:border-surface-2 shadow-lg z-10" />
+                                <div className="absolute left-2 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-surface-4 dark:border-surface-2 shadow-lg z-10" />
 
                                 <div className="flex-1" />
                             </div>

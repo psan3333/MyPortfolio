@@ -1,6 +1,9 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+    const { t } = useTranslation();
+
     return (
         <footer className="bg-foreground py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,10 +36,9 @@ export function Footer() {
 
                 <div className="border-t border-background mt-8 pt-8 text-center">
                     <span className="text-muted flex items-center justify-center gap-2">
-                        Made with React & TailwindCSS
-                    </span>
-                    <span className="text-background text-sm mt-2">
-                        © {new Date().getFullYear()} All rights reserved.
+                        {t("footer.made")} {t("footer.with")} React,
+                        TailwindCSS, GSAP, i18next {t("footer.and")} React
+                        Router v7
                     </span>
                 </div>
             </div>

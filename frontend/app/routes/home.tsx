@@ -4,12 +4,12 @@ import { About } from "~/components/About";
 import { Projects } from "~/components/Projects";
 import { TechStack } from "~/components/TechStack";
 import { Experience } from "~/components/Experience";
-import { Contact } from "~/components/Contact";
+import { ContactMe } from "~/components/ContactMe";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger, SplitText } from "gsap/all";
+import { ScrollTrigger, SplitText, ScrollToPlugin } from "gsap/all";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, ScrollToPlugin);
 
 export function meta({}: Route.MetaArgs) {
     return [
@@ -30,7 +30,7 @@ export default function Home() {
             <TechStack />
             <Projects />
             <Experience />
-            <Contact />
+            <ContactMe />
         </main>
     );
 }
