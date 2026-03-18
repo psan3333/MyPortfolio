@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const languages = ["en", "ru"];
@@ -20,7 +20,7 @@ export function LanguageSwitcher() {
     );
 
     const toggleLanguage = () => {
-        let newIdx = (idx + 1) % 2;
+        const newIdx = (idx + 1) % 2;
         setIdx(newIdx);
         i18n.changeLanguage(languages[newIdx]);
     };

@@ -1,4 +1,6 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FiLinkedin } from "react-icons/fi";
+import { RiGithubLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 
 export function Footer() {
@@ -15,7 +17,7 @@ export function Footer() {
                             rel="noopener noreferrer"
                             className="p-3 rounded-full bg-secondary-foreground hover:bg-secondary text-background hover:text-foreground transition-all duration-300"
                         >
-                            <Github size={20} />
+                            <RiGithubLine size={20} />
                         </a>
                         <a
                             href="https://linkedin.com"
@@ -23,7 +25,7 @@ export function Footer() {
                             rel="noopener noreferrer"
                             className="p-3 rounded-full bg-secondary-foreground hover:bg-secondary text-background hover:text-foreground transition-all duration-300"
                         >
-                            <Linkedin size={20} />
+                            <FiLinkedin size={20} />
                         </a>
                         <a
                             href="mailto:hello@example.com"

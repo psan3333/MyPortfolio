@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/all";
 import { useTranslation } from "react-i18next";
@@ -14,7 +14,7 @@ export function ContactMe() {
     const getInTouchRef = useRef<HTMLHeadingElement>(null);
 
     useEffect(() => {
-        let newText = {
+        const newText = {
             getIn: t("contactMe.getIn", { lng: i18n.language }),
             touch: t("contactMe.touch", { lng: i18n.language }),
         };
@@ -22,7 +22,7 @@ export function ContactMe() {
     }, [i18n.language]);
 
     useGSAP(() => {
-        let split = new SplitText(getInTouchRef.current, {
+        const split = new SplitText(getInTouchRef.current, {
             type: "chars",
             aria: "none",
         });
@@ -56,7 +56,7 @@ export function ContactMe() {
         };
     }, [text]);
 
-    const Contact = () => {
+    const Contact = useCallback(() => {
         useEffect(() => {}, [i18n.language]);
         return (
             <div className="text-center mb-16">
@@ -72,7 +72,7 @@ export function ContactMe() {
                 </p>
             </div>
         );
-    };
+    }, [text]);
 
     return (
         <section id="contact" className="py-24 bg-background">

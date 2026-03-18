@@ -11,7 +11,7 @@ export function About() {
     const { t } = useTranslation();
 
     const { contextSafe } = useGSAP(
-        (context, contextSafe) => {
+        () => {
             const cards = cardsRef.current?.children;
             if (!cards) return;
 
