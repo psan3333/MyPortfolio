@@ -1,0 +1,13 @@
+- Starting from 3rd year in HSU actively engaged in body training - 3 times a week in average.
+- In my 3rd year also started attending course on business administration from SBMA business club.
+- At the 13th season of SMBA create a fullstack real estate aggregator for real estate promotion and digital registration and signing for rental transactions.
+- In 2023 I was forking as a lab assistant (programmer) in Institute of Thermophysics SB RAS.
+- I was helping with initiation of first-year students starting from 3rd year in NSU.
+- In August 2024 I've built a Telegram bot to help people search sports partner (Sportics Bot - I'm recreating it into Collab Bot right now).
+- From September 2024 me and my colleague started a running club for colleagues in SBMA business club - I've left the club in June 2025.
+- Starting from half of my 3rd year in NSU I started visiting and working with psychologist on my fears and overall mental problems which were restricting abilities to interact with people and act in certain situations (and a lot of different deep personal issues).
+- In my 4th year I started visiting psychotherapeutic group and worked on my social skills while helping other people solve their problems.
+- In the fall of 2024 I've joined closed business club Anomaly (owner - Mikhail Grebenyuk), learned some courses from there and helped with some events (October 2024 - joined the club and started working on my sales skills, April 2025 - volunteered to help with public event on the topic of business analysis).
+- In the spring of 2025 I've built a social networking Telegram bot for SMBA business club (based on Sportics Bot - as I said, it's being reconstructed into other bot called Collab Bot).
+- I've successfully defended my diploma thesis titled "Recognition, capturing and sorting hard trash object with computer vision algorithms and algorithms of deep reinforcement learning". Right now I'm working on remake of this project - side research thing.
+- In July and August of 2025 worked as real estate agent and proficciently developed sales skills and skills of working in teams at "Etagi" real estate agency.

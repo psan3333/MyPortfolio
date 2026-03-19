@@ -4,7 +4,6 @@ import { SplitText } from "gsap/all";
 import { useTranslation } from "react-i18next";
 import { useGSAP } from "@gsap/react";
 
-// Contact is now a standard FC, using forwardedRef for h2
 const Contact = ({
     text,
     lang,
@@ -50,7 +49,6 @@ const Contact = ({
 
 export function ContactMe({ lang }: { lang: string }) {
     const { t } = useTranslation();
-    // Store text depending on `lang` using effect
     const [text, setText] = useState(() => ({
         getIn: t("contactMe.getIn", { lng: lang }),
         touch: t("contactMe.touch", { lng: lang }),
@@ -62,47 +60,39 @@ export function ContactMe({ lang }: { lang: string }) {
         });
     });
 
-    // This will ensure text updates when language changes
     useEffect(() => {
         updateText(lang);
     }, [lang, t]);
 
-    // We use a ref for the h2 for animation
     const getInTouchRef = useRef<HTMLHeadingElement>(null);
 
-    // Animation hook
-    useGSAP(
-        () => {
-            const h2 = getInTouchRef.current;
-            console.log(h2);
-            if (!h2) return;
+    useGSAP(() => {
+        const h2 = getInTouchRef.current;
+        console.log(h2);
+        if (!h2) return;
 
-            const split = new SplitText(h2, {
-                type: "chars",
-                aria: "none",
-            });
-            gsap.from(split.chars, {
-                scrollTrigger: {
-                    trigger: h2,
-                    start: "top 90%",
-                    // markers: true,
-                },
-                x: 30,
-                opacity: 0,
-                duration: 0.5,
-                stagger: 0.05,
-                ease: "power3.out",
-            });
+        const split = new SplitText(h2, {
+            type: "chars",
+            aria: "none",
+        });
+        gsap.from(split.chars, {
+            scrollTrigger: {
+                trigger: h2,
+                start: "top 90%",
+                // markers: true,
+            },
+            x: 30,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.05,
+            ease: "power3.out",
+        });
 
-            return () => {
-                split.revert();
-            };
-        },
-        // Depend on text, so when language changes and text re-renders, the animation is retriggered
-        [text],
-    );
+        return () => {
+            split.revert();
+        };
+    }, [text]);
 
-    // Use a `key` prop on Contact to force re-mount and ensure SplitText gets the fresh DOM after language changes
     return (
         <section id="contact" className="py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,11 +100,7 @@ export function ContactMe({ lang }: { lang: string }) {
                     ref={getInTouchRef}
                     text={text}
                     lang={lang}
-                    key={
-                        lang +
-                        text.getIn +
-                        text.touch /* will remount when language or text changes */
-                    }
+                    key={lang + text.getIn + text.touch}
                 />
             </div>
         </section>
