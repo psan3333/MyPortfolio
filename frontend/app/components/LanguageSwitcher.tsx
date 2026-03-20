@@ -1,7 +1,5 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const languages = ["en", "ru"];
@@ -10,23 +8,21 @@ export function LanguageSwitcher() {
     const { i18n } = useTranslation();
     const [idx, setIdx] = useState(i18n.language === "en" ? 0 : 1);
 
-    useGSAP(
-        () => {
-            gsap.globalTimeline.revert();
-            gsap.globalTimeline.restart(true, false);
-            ScrollTrigger.refresh(true);
-        },
-        { dependencies: [i18n.language] },
-    );
-
-    const toggleLanguage = () => {
-        const newIdx = (idx + 1) % 2;
-        setIdx(newIdx);
-        i18n.changeLanguage(languages[newIdx]);
-    };
+    useEffect(() => {
+        // ensure all animations were created
+        const timeout = setTimeout(() => ScrollTrigger.refresh(true), 0);
+        return () => clearTimeout(timeout);
+    }, [i18n.language]);
 
     return (
-        <button className="icon-contrast" onClick={() => toggleLanguage()}>
+        <button
+            className="icon-contrast"
+            onClick={async () => {
+                const newIdx = (idx + 1) % 2;
+                setIdx(newIdx);
+                await i18n.changeLanguage(languages[newIdx]);
+            }}
+        >
             {languages[idx]}
         </button>
     );

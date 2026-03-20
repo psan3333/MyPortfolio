@@ -17,6 +17,7 @@ import { FaGolang } from "react-icons/fa6";
 import type { IconType } from "react-icons/lib";
 import ZustandIcon from "./icons/ZustandIcon";
 import { useTranslation } from "react-i18next";
+import OpenCodeIcon from "./icons/OpenCodeIcon";
 
 type StackItem = {
     tech: string;
@@ -48,6 +49,7 @@ const technologies: StackItem[] = [
         Icon: SiMongodb,
     },
     { className: "text-[#057AC9]", tech: "SQLite", Icon: SiSqlite },
+    { className: "", tech: "OpenCode", Icon: OpenCodeIcon },
 ];
 
 const RollingList = () => {

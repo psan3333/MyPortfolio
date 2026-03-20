@@ -131,7 +131,8 @@ i18n
                             title: "Which soft-skills you have?",
                             answer: `
 - I can give presentation in front of any amount of people, even unprepared.
-- I'm decent at sales and negotiating with people
+- I'm decent at sales and negotiating with people.
+- I can clearly and without anger resolve arguments between people.
                             `
                         },
                         "8": {

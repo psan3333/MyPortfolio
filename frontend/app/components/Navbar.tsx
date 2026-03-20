@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import { Menu, X } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { useTheme } from "~/hooks/useTheme";
 import { useTranslation } from "react-i18next";
@@ -19,13 +18,12 @@ const navItems = [
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const theme = useTheme((state) => state.theme);
     const setTheme = useTheme((state) => state.setTheme);
     const toggleTheme = useTheme((state) => state.toggleTheme);
     const { t } = useTranslation();
-    const { contextSafe } = useGSAP();
+    const { contextSafe } = useGSAP(() => {}, {});
     const scrollToSection = contextSafe((sectionId: string) => {
         gsap.to(window, {
             duration: 0.75,
@@ -94,36 +92,8 @@ export function Navbar() {
                         </button>
                         <LanguageSwitcher />
                     </div>
-
-                    <button
-                        className="md:hidden p-2 text-gray-700"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    >
-                        {isMobileMenuOpen ? (
-                            <X size={24} />
-                        ) : (
-                            <Menu size={24} />
-                        )}
-                    </button>
                 </div>
             </div>
-
-            {isMobileMenuOpen && (
-                <div className="md:hidden bg-white border-t">
-                    <div className="px-4 py-4 space-y-3">
-                        {navItems.map((item) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                className="block text-base font-medium text-muted-foreground transition-colors"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                {t(`nav.${item.name}`)}
-                            </a>
-                        ))}
-                    </div>
-                </div>
-            )}
         </nav>
     );
 }

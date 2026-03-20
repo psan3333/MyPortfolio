@@ -1,4 +1,10 @@
-import React, { useEffect, useEffectEvent, useRef, useState } from "react";
+import React, {
+    useCallback,
+    useEffect,
+    useEffectEvent,
+    useRef,
+    useState,
+} from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/all";
 import { useTranslation } from "react-i18next";
@@ -48,6 +54,7 @@ const Contact = ({
 };
 
 export function ContactMe({ lang }: { lang: string }) {
+    const getInTouchRef = useRef<HTMLHeadingElement>(null);
     const { t } = useTranslation();
     const [text, setText] = useState(() => ({
         getIn: t("contactMe.getIn", { lng: lang }),
@@ -64,17 +71,15 @@ export function ContactMe({ lang }: { lang: string }) {
         updateText(lang);
     }, [lang, t]);
 
-    const getInTouchRef = useRef<HTMLHeadingElement>(null);
-
-    useGSAP(() => {
+    const onFontLoaded = useCallback(() => {
         const h2 = getInTouchRef.current;
-        console.log(h2);
         if (!h2) return;
 
         const split = new SplitText(h2, {
             type: "chars",
             aria: "none",
         });
+
         gsap.from(split.chars, {
             scrollTrigger: {
                 trigger: h2,
@@ -87,11 +92,15 @@ export function ContactMe({ lang }: { lang: string }) {
             stagger: 0.05,
             ease: "power3.out",
         });
+    }, []);
 
-        return () => {
-            split.revert();
-        };
-    }, [text]);
+    useGSAP(
+        () => {
+            if (document.fonts.status === "loaded") onFontLoaded();
+            document.fonts.addEventListener("loadingdone", onFontLoaded);
+        },
+        { dependencies: [text], revertOnUpdate: true },
+    );
 
     return (
         <section id="contact" className="py-24 bg-background">
