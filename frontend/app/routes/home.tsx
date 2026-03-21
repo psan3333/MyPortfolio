@@ -5,6 +5,7 @@ import { TechStack } from "~/components/TechStack";
 import { Experience } from "~/components/Experience";
 import { ContactMe } from "~/components/ContactMe";
 import { useTranslation } from "react-i18next";
+import QA from "~/components/QA";
 
 export default function Home() {
     const { i18n } = useTranslation();
@@ -23,6 +24,7 @@ export default function Home() {
                 <Projects />
                 <Experience />
                 <ContactMe lang={i18n.language} />
+                <QA />
             </main>
         </>
     );

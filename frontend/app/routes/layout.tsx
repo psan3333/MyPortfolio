@@ -3,7 +3,6 @@ import { Footer } from "~/components/Footer";
 import { Navbar } from "~/components/Navbar";
 import { useOnMounted } from "~/hooks/useMounted";
 import { cn } from "~/lib/utils";
-import { useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText, ScrollToPlugin } from "gsap/all";

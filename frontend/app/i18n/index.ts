@@ -6,7 +6,7 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        fallbackLng: "en",
+        fallbackLng: "ru",
 
         interpolation: {
             escapeValue: false
@@ -100,42 +100,42 @@ i18n
                     },
                     qa: {
                         "0": {
-                            title: "Желаемый уровень дохода",
-                            answer: "Во время стажировки - от 70 000 рублей вполне адекватный уровень оплаты, дальше - от 120 000 рублей, и дальше рост в зависимости от того, как я выполняю свои задачи."
+                            title: "Desirable pay",
+                            answer: "While I'm in the internship - pay from 70 000 roubles seems fair, after that - from 120 000 roubles with the ability of growth depending on my work performance."
                         },
                         "1": {
-                            title: "Какой у тебя уровень образования?",
-                            answer: 'Я закончил бакалавриат Новосибирского Государственного Университета - факультет ИИР (Институт Интеллектуальной Робототехники), направление "Мехатроника и робототехника". ЗАкончил учебу в 2025 году, в июне.'
+                            title: "What's your level of education?",
+                            answer: "I've got bachelor's degree at Novosibirsk State University in the Institute of Intellectual Robotics - Mechatronics and Robotics."
                         },
                         "2": {
-                            title: "Какой у тебя уровень английского?",
-                            answer: 'На данный момент тестирование на навык не проходил, но могу оценить себя на C1 в использовании английского языка: слушание, понимание языка, использование языка на практике (написание текста и кода, в разговорной речи). Могу идеально понимать разговорную речь и могу также отвечать, однако потребуется немного времени, чтобы привыкнуть к речи - на данный момент не использую речь на английском. По необходимости, могу подтвердить знание языка.'
+                            title: "What's your level of English?",
+                            answer: "I didn't complete any tests to confirm my English level, but my personal rating - B2/C1: can understand any English speech, can read English text fluently with little help from translation engines, also can speak English but for now never had practical application of speaking skills (only in the thought process...). Through usage can easily improve this skills, this I can say about absolutely every skill actually."
                         },
                         "3": {
-                            title: "Какие рабочие задачи тебя интересуют?",
-                            answer: 'Я готов выполнять любую задачу, которая касается работы fullstack/frontend разработчика касаемо написания нового кода или поддержки старого. Также к таким задачам можно отнести soft-skills (общение с клиентом, работа в команде с разными специалистами, включая не разработчиков - это вообще не проблема). Особо буду рад участвовать в разработке, тестировании, публикации и правке новых или существующих проектов!'
+                            title: "Are there any particular tasks you're interested in at the job?",
+                            answer: "I understand full range of tasks I might need to do as frontend/fullstack developer, so I don't mind doing any tasks which are part of my exact job. If there are any new project"
                         },
                         "4": {
-                            title: "Расскажи больше о себе и о том, чем ты занимался во время учебы.",
-                            answer: "Меня зовут Алексей, недавно закончил Новосибирский Государственный Университет, однако по специальности сразу не пошел работать: на тот момент решил пойти работать риелтором - важно было, чтобы я научился общаться с разными людьми без каких-либо проблем, личная цель. Когда эта цель была достигнута, я переехал домой в Барнаул, где я уже полгода постепенно улучшаю свои навыки в разработке, вкелючая изучение и разработку на новом языке программирования (Golang). На текущий момент считаю, что идеально подготовился для того, чтобы работать frontend или fullstack разработчиком на Typescript, React, классическом Javascript или с backend фреймворком (здесь ограничений не вижу - как минимум, Express.js или Gin на Golang). Также могу без проблем работать с базами данных PostgreSQL и MongoDB, с другими не успел поработать."
+                            title: "Where do you live right now?",
+                            answer: "Right now I live in Barnaul, Russia. This year I'm going to move to Novosibirsk after I find the job as a frontend/fullstack developer."
                         },
                         "5": {
-                            title: "Где на данный момент проживаешь?",
-                            answer: "На данный момент проживаю в Барнауле, так получилось. Смогу работать дистанционно без проблем,  рассматриваю пеезд в Новосибирск"
+                            title: "Which dev grade do you have right now?",
+                            answer: "I have little experience doing commercial development, so right now I consider myself intern/junior on job market. If I had to tell you which grade I would place on myself in terms of skills I would say middle for sure, but let's be real - I have little commercial experience, so I don't mind being intern or junior."
                         },
                         "6": {
-                            title: "Какой грейд разработчика у тебя сейчас?",
-                            answer: "У меня довольно мало опыта коммерческой разработки, тем более по желаемой специальности, поэтому оцениваю себя как Intern или Junior. По своим способностям в разработке мог бы оценить себя выше Junior (Middle, соответственно), но у меня мало опыта коммерческой разработки просто, поэтому так."
-                        },
-                        "7": {
                             title: "Which soft-skills you have?",
                             answer: `
-- I can give presentation in front of any amount of people, even unprepared.
-- I'm decent at sales and negotiating with people.
-- I can clearly and without anger resolve arguments between people.
+- I can give presentation in front of any amount of people, even unprepared if I know the topic (if needed - I happened with me several times already).
+- I'm decent at sales and negotiating with people - know how to get what person/company needs right now and with that give the person ideas on which product they should use.
+- I can clearly and without anger resolve arguments between people - just basic communication and listening, I don't like to get angry over topics of little importance to me (arguing about something is one of them).
+- I have critical thinking - it seems to me like a natural ability, but I have to tell you - I really developed this ability through big amount of work on my character and my assumptions (developing growth mindset after living in poor environment was very hard).
+- I can easily communicate with anybody if I need to - so, if I need to talk with somebody I can do it with relative ease (only if I need to - talking to colleagues or users will be no problem).
+
+The list can be very big considering only sales skills required to make money but I think this is enough - other skills you can view in my hh.ru resume.
                             `
                         },
-                        "8": {
+                        "7": {
                             title: "What were you doing while studying at NSU except main studies?",
                             answer: `
 - Starting from 3rd year in HSU actively engaged in body training - 3 times a week in average.
@@ -152,6 +152,10 @@ i18n
 - I've successfully defended my diploma thesis titled "Recognition, capturing and sorting hard trash object with computer vision algorithms and algorithms of deep reinforcement learning". Right now I'm working on remake of this project - side research thing.
 - In July and August of 2025 worked as real estate agent and proficciently developed sales skills and skills of working in teams at "Etagi" real estate agency.
                             `
+                        },
+                        "8": {
+                            title: "Did you ever work somewhere outside of tech?",
+                            answer: `Yes! I've tried to work as a salesman in the fall of 2024 (falied miserably - made only 5000 roubles), then I've worked as a real estate agent in "Etagi" real estate agency - this time made 40 000 roubles and made more than 1000 calls in my first month (first and last - worked only for 1 month).`
                         }
                     }
                 }
@@ -243,6 +247,7 @@ i18n
                         and: "и"
                     },
                     qa: {
+                        label: "Ответы на потенциальные вопросы, которые могут возникнут заранее",
                         "0": {
                             title: "Желаемый уровень дохода",
                             answer: "Во время стажировки - от 70 000 рублей вполне адекватный уровень оплаты, дальше - от 120 000 рублей, и дальше рост в зависимости от того, как я выполняю свои задачи."
@@ -260,22 +265,26 @@ i18n
                             answer: 'Я готов выполнять любую задачу, которая касается работы fullstack/frontend разработчика касаемо написания нового кода или поддержки старого. Также к таким задачам можно отнести soft-skills (общение с клиентом, работа в команде с разными специалистами, включая не разработчиков - это вообще не проблема). Особо буду рад участвовать в разработке, тестировании, публикации и правке новых или существующих проектов!'
                         },
                         "4": {
-                            title: "Расскажи больше о себе и о том, чем ты занимался во время учебы.",
-                            answer: "Меня зовут Алексей, недавно закончил Новосибирский Государственный Университет, однако по специальности сразу не пошел работать: на тот момент решил пойти работать риелтором - важно было, чтобы я научился общаться с разными людьми без каких-либо проблем, личная цель. Когда эта цель была достигнута, я переехал домой в Барнаул, где я уже полгода постепенно улучшаю свои навыки в разработке, вкелючая изучение и разработку на новом языке программирования (Golang). На текущий момент считаю, что идеально подготовился для того, чтобы работать frontend или fullstack разработчиком на Typescript, React, классическом Javascript или с backend фреймворком (здесь ограничений не вижу - как минимум, Express.js или Gin на Golang). Также могу без проблем работать с базами данных PostgreSQL и MongoDB, с другими не успел поработать."
-                        },
-                        "5": {
                             title: "Где на данный момент проживаешь?",
                             answer: "На данный момент проживаю в Барнауле, так получилось. Смогу работать дистанционно без проблем,  рассматриваю пеезд в Новосибирск"
                         },
-                        "6": {
+                        "5": {
                             title: "Какой грейд разработчика у тебя сейчас?",
                             answer: "У меня довольно мало опыта коммерческой разработки, тем более по желаемой специальности, поэтому оцениваю себя как Intern или Junior. По своим способностям в разработке мог бы оценить себя выше Junior (Middle, соответственно), но у меня мало опыта коммерческой разработки просто, поэтому так."
                         },
-                        "7": {
+                        "6": {
                             title: "Какие soft-skills у тебя есть?",
-                            answer: ""
+                            answer: `
+- Я могу легко сделать презентацию перед любым количеством людей - в том числе незапланированные презентации, если в теме средне разбираюсь (что-то знаю на тему).
+- Я неплохо разобрался и умею исползовать навыки продаж, что позволяет мне понять потребности других людей, разобраться в том, как я/мы можем решить проблему человека/людей/компании подходящим образом.
+- Могу спокойно помочь разрешить спор, включая споры со мной. Это не сложно, так как я понимаю, что от этого нет никакой пользы - можно просто вместе во всем разобраться на месте.
+- Обладаю высоким уровнем критического мышления - как минимум могу это подтвердить тем, что я пошел к психологу, чтобы разобраться со своими личными проблемами, решил уделить полгода после учебы в НГУ, чтобы подкачать свои навыки как программист, участвовал в двух бизнес-клубах (SMBA и Аномалия), чтобы разобраться как с личными проблемами в характере, так и понять, как люди зарабатывают большие деньги.
+- Если есть необходимость, могу без проблем начать диалог к кем угодно - когда есть смысл в общении с другим человеком, у меня никаких трудностей не возникает (то есть, на работе проблем не будет в общении с коллегами).
+
+Это краткий набор soft-skills - остальные можете посмотреть в резюме hh.ru
+                            `
                         },
-                        "8": {
+                        "7": {
                             title: "Чем занимался в ВУЗе и чем занимаешься сейчас, кроме разработки нейронных сетей?",
                             answer: `
 - Начиная с 3 курса в НГУ, активно занимаюсь спортом - в среднем 3 раза в неделю.
