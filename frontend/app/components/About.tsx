@@ -54,7 +54,7 @@ export function About() {
         <section id="about" className="py-24 bg-background">
             <div className="mx-auto px-8 sm:px-16 lg:px-24">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                    <h2>
                         {t("aboutMe.about")}{" "}
                         <span className="text-surface-3">
                             {t("aboutMe.me")}

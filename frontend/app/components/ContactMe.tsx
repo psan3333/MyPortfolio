@@ -1,4 +1,4 @@
-import React, {
+import {
     useCallback,
     useEffect,
     useEffectEvent,
@@ -30,7 +30,7 @@ const Contact = ({
             scrollTrigger: {
                 trigger: ref.current,
                 start: "top 80%",
-                markers: true,
+                // markers: true,
             },
             x: 30,
             opacity: 0,
@@ -40,10 +40,7 @@ const Contact = ({
     });
     return (
         <div className="text-center mb-16">
-            <h2
-                ref={ref}
-                className="text-3xl md:text-4xl font-bold text-foreground"
-            >
+            <h2 ref={ref}>
                 {text.getIn} <span className="themed-text">{text.touch}</span>
             </h2>
             <p className="suggestion text-secondary-foreground mt-4 max-w-2xl mx-auto">

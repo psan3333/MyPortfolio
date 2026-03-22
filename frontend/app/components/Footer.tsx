@@ -12,7 +12,7 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex gap-4">
                         <a
-                            href="https://github.com"
+                            href="https://github.com/psan3333"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-3 rounded-full bg-secondary-foreground hover:bg-secondary text-background hover:text-foreground transition-all duration-300"
@@ -20,7 +20,7 @@ export function Footer() {
                             <RiGithubLine size={20} />
                         </a>
                         <a
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D1%86%D0%B0%D1%80%D0%B5%D0%B2-138787390/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-3 rounded-full bg-secondary-foreground hover:bg-secondary text-background hover:text-foreground transition-all duration-300"
@@ -28,7 +28,7 @@ export function Footer() {
                             <FiLinkedin size={20} />
                         </a>
                         <a
-                            href="mailto:hello@example.com"
+                            href="mailto:tsarev.alexey.work@gmail.com"
                             className="p-3 rounded-full bg-secondary-foreground hover:bg-secondary text-background hover:text-foreground transition-all duration-300"
                         >
                             <Mail size={20} />

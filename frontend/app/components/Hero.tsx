@@ -4,7 +4,6 @@ import { useGSAP } from "@gsap/react";
 import { ArrowDown, Mail } from "lucide-react";
 import { FiLinkedin } from "react-icons/fi";
 import { RiGithubLine } from "react-icons/ri";
-import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 
 export function Hero() {
@@ -64,7 +63,7 @@ export function Hero() {
             className="min-h-screen flex items-center justify-center"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-                <p className="mb-10 mx-auto text-lg font-medium text-yandex-red tracking-widest uppercase">
+                <p className="mb-10 mx-auto text-lg font-medium tracking-widest uppercase">
                     {t("hero.hello")}{" "}
                     <span className="themed-text font-extrabold">
                         {t("hero.me")}
@@ -73,7 +72,7 @@ export function Hero() {
 
                 <h1
                     ref={titleRef}
-                    className="text-5xl md:text-7xl font-bold text-secondary-foreground mb-6"
+                    className="font-bold text-secondary-foreground mb-6"
                 >
                     {t("hero.fullstack")}
                     <span className="themed-text"> {t("hero.dev")}</span>
@@ -90,12 +89,12 @@ export function Hero() {
                     ref={buttonsRef}
                     className="flex flex-row gap-4 justify-center items-center mb-12"
                 >
-                    <Link to="#projects" className="btn-default">
+                    <a href="#projects" className="btn-default">
                         {t("hero.viewWork")}
-                    </Link>
-                    <Link to="#contact" className="btn-outline">
+                    </a>
+                    <a href="#contact" className="btn-outline">
                         {t("hero.getInTouch")}
-                    </Link>
+                    </a>
                 </div>
 
                 <div ref={socialsRef} className="flex justify-center gap-6">

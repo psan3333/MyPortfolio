@@ -48,7 +48,7 @@ i18n
                             text: "Strongly believe that there is no unsolvable problems. I can approach any problem and in the process of solving problems I can quickly learn and use required tech."
                         },
                         "3": {
-                            title: "Inovation",
+                            title: "Innovation",
                             text: "Right now actively use OpenCode as a tool to create lots of boilerplate code, also use GhatGPT and Qwen to learn new things, mostly things in development. Also new to NotebookLM."
                         }
                     },
@@ -77,13 +77,13 @@ i18n
                             "0": {
                                 title: "Diplom Practice",
                                 company: "Novosibirsk State University",
-                                desc: "I created Deep Reinforcment Learning algorithm which controlls robotic manipulator to sort out different kind of trash.",
+                                desc: "I created Deep Reinforcment Learning algorithm which controls robotic manipulator to sort out different kind of trash.",
                                 location: "Novosibirsk, Russia"
                             },
                             "1": {
                                 title: "Lab Assistant",
-                                company: "Institube of Thermophysics at SB RAS",
-                                desc: "I was building programs for analysing hydro-sernor data + built particle segmentation and tracking algorithm.",
+                                company: "Institute of Thermophysics at SB RAS",
+                                desc: "I was building programs for analysing hydro-sersor data + built particle segmentation and tracking algorithm.",
                                 location: "Novosibirsk, Russia"
                             },
                         }
@@ -91,7 +91,7 @@ i18n
                     contactMe: {
                         getIn: "Get In",
                         touch: "Touch",
-                        label: "Have a project in mind or want ot collaborate? Feel free to reach out!"
+                        label: "Have a project in mind or want to collaborate? Feel free to reach out!"
                     },
                     footer: {
                         made: "Made",
@@ -114,7 +114,7 @@ i18n
                         },
                         "3": {
                             title: "Are there any particular tasks you're interested in at the job?",
-                            answer: "I understand full range of tasks I might need to do as frontend/fullstack developer, so I don't mind doing any tasks which are part of my exact job. If there are any new project"
+                            answer: "I understand full range of tasks I might need to do as frontend/fullstack developer, so I don't mind doing any tasks which are part of my exact job. If there is any new project, I'd be grateful to participate in development of such."
                         },
                         "4": {
                             title: "Where do you live right now?",
@@ -204,7 +204,7 @@ The list can be very big considering only sales skills required to make money bu
                     techStack: {
                         tech: "Технологии",
                         stack: "", // на английском Tech Stack, а на русском можно сократить до одного слова
-                        caption: "Технологии, которые я использую для создания разнообразных приложений"
+                        caption: "Все, что я использую для создания приложений"
                     },
                     projects: {
                         featured: "Основные",

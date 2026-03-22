@@ -101,11 +101,11 @@ export function TechStack() {
     return (
         <section id="tech" className="py-20 bg-secondary overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+                <h2 className="text-center">
                     {t("techStack.tech")}{" "}
                     <span className="themed-text">{t("techStack.stack")}</span>
                 </h2>
-                <p className="text-surface-1 text-center mt-4 max-w-xl mx-auto">
+                <p className="text-center mt-4 max-w-xl mx-auto">
                     {t("techStack.caption")}
                 </p>
             </div>

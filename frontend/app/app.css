@@ -94,16 +94,49 @@
 
 @layer base {
     ul {
-        @apply w-[70%] flex flex-col gap-2 list-disc list-outside;
+        @apply max-w-7xl flex flex-col gap-2 list-disc list-outside;
     }
+
     li {
         @apply marker:h-full marker:themed-text marker:font-bold marker:text-[16px] marker:m-0 marker:p-0;
     }
+
     body {
         @apply bg-background text-foreground;
+        scrollbar-width: 8px;
+        scrollbar-color: var(--surface-4);
     }
+
     html {
         @apply font-sans;
+    }
+
+    h1 {
+        @apply text-6xl lg:text-8xl font-bold text-secondary-foreground;
+    }
+
+    h2 {
+        @apply text-5xl lg:text-7xl font-bold text-secondary-foreground;
+    }
+
+    h3 {
+        @apply text-4xl lg:text-6xl font-bold text-secondary-foreground;
+    }
+
+    h4 {
+        @apply text-3xl lg:text-5xl font-bold text-secondary-foreground;
+    }
+
+    h5 {
+        @apply text-2xl lg:text-4xl font-bold text-secondary-foreground;
+    }
+
+    h6 {
+        @apply text-xl lg:text-3xl font-bold text-secondary-foreground;
+    }
+
+    p {
+        @apply text-foreground max-w-2xl leading-relaxed;
     }
 }
 
@@ -136,32 +169,4 @@
 
 @utility themed-text {
     @apply text-surface-4 dark:text-surface-2;
-}
-
-h1 {
-    @apply text-6xl lg:text-8xl font-bold text-secondary-foreground;
-}
-
-h2 {
-    @apply text-5xl lg:text-7xl font-bold text-secondary-foreground;
-}
-
-h3 {
-    @apply text-4xl lg:text-6xl font-bold text-secondary-foreground;
-}
-
-h4 {
-    @apply text-3xl lg:text-5xl font-bold text-secondary-foreground;
-}
-
-h5 {
-    @apply text-2xl lg:text-4xl font-bold text-secondary-foreground;
-}
-
-h6 {
-    @apply text-xl lg:text-3xl font-bold text-secondary-foreground;
-}
-
-p {
-    @apply text-foreground max-w-2xl leading-relaxed;
 }

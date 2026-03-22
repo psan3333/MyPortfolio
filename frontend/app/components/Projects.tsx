@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ExternalLink } from "lucide-react";
 import { RiGithubLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
+import { TechBadge } from "./TechBadge";
 
 const projects = [
     {
@@ -58,12 +59,11 @@ export function Projects() {
         <section id="projects" className="py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2
-                        ref={titleRef}
-                        className="text-3xl md:text-4xl font-bold"
-                    >
+                    <h2 ref={titleRef}>
                         {t("projects.featured")}{" "}
-                        <span>{t("projects.projects")}</span>
+                        <span className="themed-text">
+                            {t("projects.projects")}
+                        </span>
                     </h2>
                     <p className="mt-4 max-w-2xl mx-auto">
                         {t("projects.label")}
@@ -97,20 +97,18 @@ export function Projects() {
                             </div>
 
                             <div className="p-6 flex-1 flex flex-col justify-between items-start">
-                                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-yandex-red transition-colors duration-300">
+                                <h3 className="mb-3 group-hover:themed-text transition-colors duration-300">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-600 mb-4 leading-relaxed">
+                                <p className="mb-4 leading-relaxed">
                                     {t(`projects.projList.${project.title}`)}
                                 </p>
                                 <div className="flex flex-wrap gap-2">
-                                    {project.tags.map((tag, tagIndex) => (
-                                        <span
-                                            key={tagIndex}
-                                            className="px-3 py-1 text-xs font-medium bg-background text-foreground rounded hover:bg-foreground hover:text-background transition-colors duration-300"
-                                        >
-                                            {tag}
-                                        </span>
+                                    {project.tags.map((tech, techIndex) => (
+                                        <TechBadge
+                                            tech={tech}
+                                            techIndex={techIndex}
+                                        />
                                     ))}
                                 </div>
                             </div>

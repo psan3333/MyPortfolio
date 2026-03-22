@@ -2,10 +2,9 @@ import { Outlet } from "react-router";
 import { Footer } from "~/components/Footer";
 import { Navbar } from "~/components/Navbar";
 import { useOnMounted } from "~/hooks/useMounted";
-import { cn } from "~/lib/utils";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger, SplitText, ScrollToPlugin } from "gsap/all";
+import { cn, onMounted } from "~/lib/utils";
+import { useLanguageUpdate } from "~/hooks/useLanguageUpdate";
+import { useThemeToggle } from "~/hooks/useThemeToggle";
 
 const Layout: React.FC<
     React.DetailedHTMLProps<
@@ -13,10 +12,9 @@ const Layout: React.FC<
         HTMLDivElement
     >
 > = ({ className }) => {
-    const mounted = useOnMounted(() => {
-        const plugins = [useGSAP, ScrollTrigger, SplitText, ScrollToPlugin];
-        gsap.registerPlugin(...plugins);
-    });
+    const mounted = useOnMounted(onMounted);
+    useLanguageUpdate();
+    useThemeToggle();
 
     if (!mounted) return null;
 

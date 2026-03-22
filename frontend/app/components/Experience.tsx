@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { Calendar, MapPin } from "lucide-react";
 import { cn } from "~/lib/utils";
 import { useTranslation } from "react-i18next";
+import { TechBadge } from "./TechBadge";
 
 const technologies = [
     {
@@ -42,7 +43,7 @@ export function Experience() {
         <section id="experience" className="py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                    <h2>
                         {t("experience.work")}{" "}
                         <span className="themed-text">
                             {t("experience.experience")}
@@ -83,11 +84,11 @@ export function Experience() {
                                                 : "items-start",
                                         )}
                                     >
-                                        <h3 className="text-xl font-semibold text-foreground">
+                                        <h4>
                                             {t(
                                                 `experience.jobsList.${index}.title`,
                                             )}
-                                        </h3>
+                                        </h4>
                                         <p className="themed-text font-medium mt-1">
                                             {t(
                                                 `experience.jobsList.${index}.company`,
@@ -118,12 +119,10 @@ export function Experience() {
                                         </p>
                                         <div className="flex flex-wrap gap-2 mt-4 justify-end">
                                             {tech.map((tech, techIndex) => (
-                                                <span
-                                                    key={techIndex}
-                                                    className="px-2 py-1 text-xs font-medium bg-background border border-muted text-foreground rounded hover:text-background hover:bg-foreground transition-colors duration-200"
-                                                >
-                                                    {tech}
-                                                </span>
+                                                <TechBadge
+                                                    tech={tech}
+                                                    techIndex={techIndex}
+                                                />
                                             ))}
                                         </div>
                                     </div>

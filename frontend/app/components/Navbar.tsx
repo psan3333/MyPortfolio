@@ -19,8 +19,6 @@ const navItems = [
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
 
-    const theme = useTheme((state) => state.theme);
-    const setTheme = useTheme((state) => state.setTheme);
     const toggleTheme = useTheme((state) => state.toggleTheme);
     const { t } = useTranslation();
     const { contextSafe } = useGSAP(() => {}, {});
@@ -36,22 +34,12 @@ export function Navbar() {
     });
 
     useEffect(() => {
-        const prefersDark = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-        ).matches;
-        setTheme(prefersDark ? "dark" : "light");
-
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [setTheme]);
-
-    useEffect(() => {
-        // setup Tailwind CSS theming
-        document.documentElement.classList.toggle("dark", theme === "dark");
-    }, [theme]);
+    }, []);
 
     return (
         <nav
