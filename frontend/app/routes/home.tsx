@@ -23,8 +23,8 @@ export default function Home() {
                 <TechStack />
                 <Projects />
                 <Experience />
-                <ContactMe lang={i18n.language} />
                 <QA />
+                <ContactMe lang={i18n.language} />
             </main>
         </>
     );

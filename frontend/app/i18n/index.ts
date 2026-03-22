@@ -99,6 +99,7 @@ i18n
                         and: "and"
                     },
                     qa: {
+                        label: "Some answers I can provide on potential questions",
                         "0": {
                             title: "Desirable pay",
                             answer: "While I'm in the internship - pay from 70 000 roubles seems fair, after that - from 120 000 roubles with the ability of growth depending on my work performance."
@@ -126,11 +127,11 @@ i18n
                         "6": {
                             title: "Which soft-skills you have?",
                             answer: `
-- I can give presentation in front of any amount of people, even unprepared if I know the topic (if needed - I happened with me several times already).
-- I'm decent at sales and negotiating with people - know how to get what person/company needs right now and with that give the person ideas on which product they should use.
-- I can clearly and without anger resolve arguments between people - just basic communication and listening, I don't like to get angry over topics of little importance to me (arguing about something is one of them).
-- I have critical thinking - it seems to me like a natural ability, but I have to tell you - I really developed this ability through big amount of work on my character and my assumptions (developing growth mindset after living in poor environment was very hard).
-- I can easily communicate with anybody if I need to - so, if I need to talk with somebody I can do it with relative ease (only if I need to - talking to colleagues or users will be no problem).
+* I can give presentation in front of any amount of people, even unprepared if I know the topic (if needed - I happened with me several times already).
+* I'm decent at sales and negotiating with people - know how to get what person/company needs right now and with that give the person ideas on which product they should use.
+* I can clearly and without anger resolve arguments between people - just basic communication and listening, I don't like to get angry over topics of little importance to me (arguing about something is one of them).
+* I have critical thinking - it seems to me like a natural ability, but I have to tell you - I really developed this ability through big amount of work on my character and my assumptions (developing growth mindset after living in poor environment was very hard).
+* I can easily communicate with anybody if I need to - so, if I need to talk with somebody I can do it with relative ease (only if I need to - talking to colleagues or users will be no problem).
 
 The list can be very big considering only sales skills required to make money but I think this is enough - other skills you can view in my hh.ru resume.
                             `
@@ -138,19 +139,19 @@ The list can be very big considering only sales skills required to make money bu
                         "7": {
                             title: "What were you doing while studying at NSU except main studies?",
                             answer: `
-- Starting from 3rd year in HSU actively engaged in body training - 3 times a week in average.
-- In my 3rd year also started attending course on business administration from SBMA business club.
-- At the 13th season of SMBA create a fullstack real estate aggregator for real estate promotion and digital registration and signing for rental transactions.
-- In 2023 I was forking as a lab assistant (programmer) in Institute of Thermophysics SB RAS.
-- I was helping with initiation of first-year students starting from 3rd year in NSU.
-- In August 2024 I've built a Telegram bot to help people search sports partner (Sportics Bot - I'm recreating it into Collab Bot right now).
-- From September 2024 me and my colleague started a running club for colleagues in SBMA business club - I've left the club in June 2025.
-- Starting from half of my 3rd year in NSU I started visiting and working with psychologist on my fears and overall mental problems which were restricting abilities to interact with people, learn and act in certain situations (and a lot of different deep personal issues).
-- In my 4th year I started visiting psychotherapeutic group and worked on my social skills while helping other people solve their problems.
-- In the fall of 2024 I've joined closed business club Anomaly (owner - Mikhail Grebenyuk), learned some courses from there and helped with some events (October 2024 - joined the club and started working on my sales skills, April 2025 - volunteered to help with public event on the topic of business analysis).
-- In the spring of 2025 I've built a social networking Telegram bot for SMBA business club (based on Sportics Bot - as I said, it's being reconstructed into other bot called Collab Bot).
-- I've successfully defended my diploma thesis titled "Recognition, capturing and sorting hard trash object with computer vision algorithms and algorithms of deep reinforcement learning". Right now I'm working on remake of this project - side research thing.
-- In July and August of 2025 worked as real estate agent and proficciently developed sales skills and skills of working in teams at "Etagi" real estate agency.
+* Starting from 3rd year in HSU actively engaged in body training - 3 times a week in average.
+* In my 3rd year also started attending course on business administration from SBMA business club.
+* At the 13th season of SMBA create a fullstack real estate aggregator for real estate promotion and digital registration and signing for rental transactions.
+* In 2023 I was forking as a lab assistant (programmer) in Institute of Thermophysics SB RAS.
+* I was helping with initiation of first-year students starting from 3rd year in NSU.
+* In August 2024 I've built a Telegram bot to help people search sports partner (Sportics Bot - I'm recreating it into Collab Bot right now).
+* From September 2024 me and my colleague started a running club for colleagues in SBMA business club - I've left the club in June 2025.
+* Starting from half of my 3rd year in NSU I started visiting and working with psychologist on my fears and overall mental problems which were restricting abilities to interact with people, learn and act in certain situations (and a lot of different deep personal issues).
+* In my 4th year I started visiting psychotherapeutic group and worked on my social skills while helping other people solve their problems.
+* In the fall of 2024 I've joined closed business club Anomaly (owner - Mikhail Grebenyuk), learned some courses from there and helped with some events (October 2024 - joined the club and started working on my sales skills, April 2025 - volunteered to help with public event on the topic of business analysis).
+* In the spring of 2025 I've built a social networking Telegram bot for SMBA business club (based on Sportics Bot - as I said, it's being reconstructed into other bot called Collab Bot).
+* I've successfully defended my diploma thesis titled "Recognition, capturing and sorting hard trash object with computer vision algorithms and algorithms of deep reinforcement learning". Right now I'm working on remake of this project - side research thing.
+* In July and August of 2025 worked as real estate agent and proficciently developed sales skills and skills of working in teams at "Etagi" real estate agency.
                             `
                         },
                         "8": {
@@ -275,11 +276,11 @@ The list can be very big considering only sales skills required to make money bu
                         "6": {
                             title: "Какие soft-skills у тебя есть?",
                             answer: `
-- Я могу легко сделать презентацию перед любым количеством людей - в том числе незапланированные презентации, если в теме средне разбираюсь (что-то знаю на тему).
-- Я неплохо разобрался и умею исползовать навыки продаж, что позволяет мне понять потребности других людей, разобраться в том, как я/мы можем решить проблему человека/людей/компании подходящим образом.
-- Могу спокойно помочь разрешить спор, включая споры со мной. Это не сложно, так как я понимаю, что от этого нет никакой пользы - можно просто вместе во всем разобраться на месте.
-- Обладаю высоким уровнем критического мышления - как минимум могу это подтвердить тем, что я пошел к психологу, чтобы разобраться со своими личными проблемами, решил уделить полгода после учебы в НГУ, чтобы подкачать свои навыки как программист, участвовал в двух бизнес-клубах (SMBA и Аномалия), чтобы разобраться как с личными проблемами в характере, так и понять, как люди зарабатывают большие деньги.
-- Если есть необходимость, могу без проблем начать диалог к кем угодно - когда есть смысл в общении с другим человеком, у меня никаких трудностей не возникает (то есть, на работе проблем не будет в общении с коллегами).
+* Я могу легко сделать презентацию перед любым количеством людей - в том числе незапланированные презентации, если в теме средне разбираюсь (что-то знаю на тему).
+* Я неплохо разобрался и умею исползовать навыки продаж, что позволяет мне понять потребности других людей, разобраться в том, как я/мы можем решить проблему человека/людей/компании подходящим образом.
+* Могу спокойно помочь разрешить спор, включая споры со мной. Это не сложно, так как я понимаю, что от этого нет никакой пользы - можно просто вместе во всем разобраться на месте.
+* Обладаю высоким уровнем критического мышления - как минимум могу это подтвердить тем, что я пошел к психологу, чтобы разобраться со своими личными проблемами, решил уделить полгода после учебы в НГУ, чтобы подкачать свои навыки как программист, участвовал в двух бизнес-клубах (SMBA и Аномалия), чтобы разобраться как с личными проблемами в характере, так и понять, как люди зарабатывают большие деньги.
+* Если есть необходимость, могу без проблем начать диалог к кем угодно - когда есть смысл в общении с другим человеком, у меня никаких трудностей не возникает (то есть, на работе проблем не будет в общении с коллегами).
 
 Это краткий набор soft-skills - остальные можете посмотреть в резюме hh.ru
                             `
@@ -287,19 +288,19 @@ The list can be very big considering only sales skills required to make money bu
                         "7": {
                             title: "Чем занимался в ВУЗе и чем занимаешься сейчас, кроме разработки нейронных сетей?",
                             answer: `
-- Начиная с 3 курса в НГУ, активно занимаюсь спортом - в среднем 3 раза в неделю.
-- На 3 курсе начал участие в 13 сезоне бизнес клубе SMBA - сначала на их курсе, а с 14 сезона стал помогать клубу.
-- На 13 сезоне SMBA создал платформу-агрегатор недвижимости для продвижения недвижимости с перспективой оформления электронных сделок.
-- В 2023 году работал лаборантом (программистом) в Институте Теплофизики СО РАН.
-- Начиная с 3 курса, каждый год помогал в организации посвещения первокурсников на нашем факультете ИИР (Институт Интеллектуальной Робототехники).
-- Летом между 3 и 4 курсом создал Telegram бота для поиска партнера для тренировок (Sportics Bot - сейчас переделываю в Collab Bot).
-- Организовывал спортивные мероприятия в бизнес клубе SMBA + приглашали других студентов тоже (организовали SMBA Running Club - клуб, куда люди приходят бегать).
-- С середины 3 курсы до конца 4 курса ходил к психологу - решал реальные проблемы характера (были проблемы с прямотой, уверенностью, и в общении в противоположным полом + масса личных проблем).
-- На 4 курсе ходил на психотерапевтическую группу, чтобы улучшить воспроизведение мыслей + решить личные проблемы и пообщаться с другими членами группы.
-- Осенью 2024 года вступил в закрытый бизнес клуб Аномалия (организатор пространства - Михаил Гребенюк), начал изучать курсы по продажам и созданию бизнеса + и неплохо проявил себя как член клуба в некоторых инстанциях (осенью 2024 года - вступил и начал работать над навыками продаж, апрель 2025 - помог организовать бизнес-разборы в Новосибирске, был волонтером).
-- Весной 2025 года создал Telegram бота для нетворкинга внутри бизнес клуба SMBA - SMBA Bot (адаптировал от Sportics Bot - сейчас переделываю в Collab Bot для общего пользования и поиска возможностей сотрудничества).
-- Защитил дипломную работу на отлично - тема "Распознавание, захват и сортировка твердых отходов при помощи алгоритмов компьютерного зрения и алгоритмов глубокого обучения с подкреплением". На текущий момент решил возобновить работу над проектом - стало интересно, что сейчас смогу сделать.
-- Закрепил навыки продаж и работы в команде, работая риелтором в АН "Этажи" (июль-август 2025 года).
+* Начиная с 3 курса в НГУ, активно занимаюсь спортом - в среднем 3 раза в неделю.
+* На 3 курсе начал участие в 13 сезоне бизнес клубе SMBA - сначала на их курсе, а с 14 сезона стал помогать клубу.
+* На 13 сезоне SMBA создал платформу-агрегатор недвижимости для продвижения недвижимости с перспективой оформления электронных сделок.
+* В 2023 году работал лаборантом (программистом) в Институте Теплофизики СО РАН.
+* Начиная с 3 курса, каждый год помогал в организации посвещения первокурсников на нашем факультете ИИР (Институт Интеллектуальной Робототехники).
+* Летом между 3 и 4 курсом создал Telegram бота для поиска партнера для тренировок (Sportics Bot - сейчас переделываю в Collab Bot).
+* Организовывал спортивные мероприятия в бизнес клубе SMBA + приглашали других студентов тоже (организовали SMBA Running Club - клуб, куда люди приходят бегать).
+* С середины 3 курсы до конца 4 курса ходил к психологу - решал реальные проблемы характера (были проблемы с прямотой, уверенностью, и в общении в противоположным полом + масса личных проблем).
+* На 4 курсе ходил на психотерапевтическую группу, чтобы улучшить воспроизведение мыслей + решить личные проблемы и пообщаться с другими членами группы.
+* Осенью 2024 года вступил в закрытый бизнес клуб Аномалия (организатор пространства - Михаил Гребенюк), начал изучать курсы по продажам и созданию бизнеса + и неплохо проявил себя как член клуба в некоторых инстанциях (осенью 2024 года - вступил и начал работать над навыками продаж, апрель 2025 - помог организовать бизнес-разборы в Новосибирске, был волонтером).
+* Весной 2025 года создал Telegram бота для нетворкинга внутри бизнес клуба SMBA - SMBA Bot (адаптировал от Sportics Bot - сейчас переделываю в Collab Bot для общего пользования и поиска возможностей сотрудничества).
+* Защитил дипломную работу на отлично - тема "Распознавание, захват и сортировка твердых отходов при помощи алгоритмов компьютерного зрения и алгоритмов глубокого обучения с подкреплением". На текущий момент решил возобновить работу над проектом - стало интересно, что сейчас смогу сделать.
+* Закрепил навыки продаж и работы в команде, работая риелтором в АН "Этажи" (июль-август 2025 года).
                             `
                         }
                     }

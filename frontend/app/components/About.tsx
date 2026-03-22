@@ -31,20 +31,24 @@ export function About() {
         { scope: cardsRef },
     );
 
-    const onMouseEnter = contextSafe!((card: Element) => {
-        gsap.to(card, {
-            scale: 1.02,
-            duration: 0.3,
-            ease: "power3.out",
-        });
-    });
-    const onMouseLeave = contextSafe!((card: Element) => {
-        gsap.to(card, {
-            scale: 1,
-            duration: 0.3,
-            ease: "power3.out",
-        });
-    });
+    const onMouseEnter = contextSafe!(
+        (event: React.PointerEvent<HTMLDivElement>) => {
+            gsap.to(event.currentTarget, {
+                scale: 1.02,
+                duration: 0.3,
+                ease: "power3.out",
+            });
+        },
+    );
+    const onMouseLeave = contextSafe!(
+        (event: React.PointerEvent<HTMLDivElement>) => {
+            gsap.to(event.currentTarget, {
+                scale: 1,
+                duration: 0.3,
+                ease: "power3.out",
+            });
+        },
+    );
 
     return (
         <section id="about" className="py-24 bg-background">
@@ -68,8 +72,8 @@ export function About() {
                     {aboutIcons.map((Icon, index) => (
                         <div
                             key={index}
-                            onMouseEnter={(e) => onMouseEnter(e.currentTarget)}
-                            onMouseLeave={(e) => onMouseLeave(e.currentTarget)}
+                            onMouseEnter={onMouseEnter}
+                            onMouseLeave={onMouseLeave}
                             className="p-6 rounded-2xl bg-accent hover:bg-background hover:shadow-xl transition-colors duration-300 border border-accent-foreground/10 group"
                         >
                             <div className="w-14 h-14 rounded-xl bg-surface-4/10 flex items-center justify-center mb-4 group-hover:bg-surface-3/10 transition-colors duration-300">
