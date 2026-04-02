@@ -1,7 +1,9 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
-import { cn } from "~/lib/utils";
-import { useTheme } from "~/hooks/useTheme";
+import Link from "next/link";
+import { cn } from "../../lib/utils";
+import { useTheme } from "../../hooks/useTheme";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useGSAP } from "@gsap/react";
@@ -53,7 +55,7 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     <Link
-                        to="/"
+                        href="/"
                         className="text-2xl font-bold text-surface-4 tracking-tight"
                     >
                         psan3333

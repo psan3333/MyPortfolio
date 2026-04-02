@@ -1,8 +1,10 @@
+"use client";
+
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Calendar, MapPin } from "lucide-react";
-import { cn } from "~/lib/utils";
+import { cn } from "../../lib/utils";
 import { useTranslation } from "react-i18next";
 import { TechBadge } from "./TechBadge";
 
@@ -120,8 +122,8 @@ export function Experience() {
                                         <div className="flex flex-wrap gap-2 mt-4 justify-end">
                                             {tech.map((tech, techIndex) => (
                                                 <TechBadge
+                                                    key={techIndex}
                                                     tech={tech}
-                                                    techIndex={techIndex}
                                                 />
                                             ))}
                                         </div>

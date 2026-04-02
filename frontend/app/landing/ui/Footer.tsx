@@ -1,3 +1,4 @@
+"use client";
 import { Mail } from "lucide-react";
 import { FiLinkedin } from "react-icons/fi";
 import { RiGithubLine } from "react-icons/ri";

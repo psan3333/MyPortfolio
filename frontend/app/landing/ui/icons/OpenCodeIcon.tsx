@@ -1,15 +1,19 @@
+"use client";
+
 import type { IconType } from "react-icons/lib";
-import { useTheme } from "~/hooks/useTheme";
+import { useTheme } from "@/app/hooks/useTheme";
+import Image from "next/image";
 
 const OpenCodeIcon: IconType = ({ size, className }) => {
     const theme = useTheme((state) => state.theme);
 
     return (
-        <img
+        <Image
             className={className}
             src={`/opencode-${theme}.svg`}
-            width={size}
-            height={size}
+            width={size as number}
+            height={size as number}
+            alt="OpenCode brand Icon"
         />
     );
 };

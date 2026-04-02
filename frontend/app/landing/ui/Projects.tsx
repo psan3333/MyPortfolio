@@ -106,8 +106,8 @@ export function Projects() {
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tech, techIndex) => (
                                         <TechBadge
+                                            key={techIndex}
                                             tech={tech}
-                                            techIndex={techIndex}
                                         />
                                     ))}
                                 </div>
